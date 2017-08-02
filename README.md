@@ -2,10 +2,6 @@
 
 This is a WordPress theme based on Foundation 5 by Zurb for Germanna.EDU. 
 
-Please fork, copy, modify, delete, share or do whatever you like with this. 
-
-All contributions are welcome!
-
 ## Requirements
 
 **A brief explanation to the requirements** (feel free to skip this if you're a pro):
