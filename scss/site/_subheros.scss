@@ -1,70 +1,88 @@
 .subpage-hero {
     position: relative;
-    text-align: left;
-    height: auto;
+
     display: block;
-    margin: 0 0 40px 0;
-    padding: 0;
+    width: 100%;
+    height: auto;
     max-height: 400px;
+    padding: 0;
+    margin: 0 0 40px 0;
+
+    text-align: left;
 }
 
 .without-image {
-    padding: 10px;
     position: relative;
-    text-align: left;
+
     display: block;
+    padding: 10px;
+
+    text-align: left;
+
     background: $white;
 }
 
 h1 {
-    text-align: left;
-    color: $oil;
+    display: block;
     padding: 0;
     margin: 20px 0 10px 0;
-    display: block;
+
     font-size: 3em;
+
+    text-align: left;
+
+    color: $oil;
 }
 
 .print-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+
     padding: 40px 0 20px 0;
+
     text-align: right;
-    i {
-        margin-bottom: 0;
+    &i {
         display: block;
+        margin-bottom: 0;
     }
     a {
-        background: $primary-color;
-        color: $white;
-        border-radius: 100%;
-        height: 72px;
-        width: 72px;
         display: inline-block;
+        width: 72px;
+        height: 72px;
         padding: 18px 18px 18px 18px;
         margin: 0 0 10px 10px;
-        transition: all 0.2s ease-in-out;
+
+        transition: all .2s ease-in-out;
         text-align: center;
+
+        color: $white;
+        border-radius: 100%;
+        background: $primary-color;
     }
     a:hover {
-        background: $secondary-color;
         color: $white;
+        background: $secondary-color;
     }
     span {
-        font-size: .7em;
         padding: 0;
         margin: 0;
-        line-height: 10px;
+
+        font-size: .7em;
         font-weight: 100;
+        line-height: 10px;
     }
 }
 
 #bg img {
     height: auto;
     max-height: 400px;
+
     background: no-repeat center center fixed;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }
 
 .programs-highlights {
@@ -73,66 +91,76 @@ h1 {
 
 .header.panel {
     margin: 3rem auto;
+
     border: 2px solid #444;
     background: #fff;
-    p {
+    &p {
         padding: 6px;
         margin-top: -1.25rem;
-        span {
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        &span {
             font-size: 75%;
             font-weight: bold;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
     }
     ul {
-        list-style: none;
-        text-align: center;
         padding: 0 0 0 10px;
-        li {
+
+        list-style: none;
+
+        text-align: center;
+        &li {
             list-style: none;
-            a {
+            &a {
                 padding: 10px 0;
-                font: 1rem "Avenir Next";
                 padding: 1rem 2rem 2rem 2rem;
                 margin-top: -1.25rem;
+
+                font: 1rem "Avenir Next";
             }
         }
     }
     .sign {
-        background: $primary-color;
-        width: 150px;
-        height: 2.4rem;
-        border: 2px solid $primary-color;
         position: relative;
         top: -2.5rem;
+
+        width: 150px;
+        height: 2.4rem;
         margin: auto;
-        h5 {
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: $white;
+
+        border: 2px solid $primary-color;
+        background: $primary-color;
+        &h5 {
             font-size: 70%;
-            text-align: center;
             line-height: 2rem;
+
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            color: $white;
         }
     }
 }
 
 .nursing-panels {
     padding: 20px 0 80px 0;
-    h2 {
+    &h2 {
         margin-bottom: 60px;
     }
     li {
         background: $gainsboro;
-        a {
+        &a {
             font-weight: bold;
         }
     }
     .title {
-        background: $primary-color;
-        font-weight: 800;
         font-size: 1em;
+        font-weight: 800;
+
+        background: $primary-color;
     }
 }
 
@@ -141,17 +169,20 @@ h1 {
 }
 
 .sub-nav {
-    background: $white;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 40px 0;
+
     border-top: 1px solid $base;
     border-bottom: 1px solid $base;
-    margin: 0 0 40px 0;
-    padding: 0;
-    li {
-        
-        a {
-            color: $base;
+    background: $white;
+    &li {
+        &a {
             padding: 10px 10px 10px 0;
+
             font: 800 1em $header-font-family;
+
+            color: $base;
         }
         a:hover {
             color: $jet;

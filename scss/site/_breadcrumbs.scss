@@ -1,17 +1,36 @@
 .breadcrumbs {
-    padding: 10px 0 10px 10px;
-    marging: 0;
+    padding: 0 0 0 10px;
     background: $white;
     background-color: $white;
     border: none;
-    li {}
-    .breadcrumbs-description {
-        color: jet;
-        font-weight: bold;
-    }
-    a {
+    &li {}
+    li a {
         font-size: 1em;
         font-weight: 400;
         text-transform: none;
     }
+    li.last {
+        font-weight: 800;
+    }
+}
+
+.breadcrumbs > * {
+    text-transform: none;
+}
+
+.breadcrumbs > *:before {
+    color: #AAAAAA;
+    content: "\f054";
+    font-family: FontAwesome;
+    margin: 0 10px;
+    position: relative;
+    top: 1px;
+    color: $primary-color;
+}
+
+
+/* Accessibility - hides the forward slash */
+
+[aria-label="breadcrumbs"] [aria-hidden="true"]:after {
+    content: ">";
 }

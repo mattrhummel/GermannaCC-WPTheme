@@ -15,4 +15,4 @@
 	'admin-preview-callback' => '',
 );
 	add_theme_support( 'custom-header', $defaults );
-	?>
+?>

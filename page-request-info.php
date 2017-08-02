@@ -3,108 +3,101 @@
 /*
 Template Name: Request Information
 */
+$students_name	= get_field('students_name');
+$students_title	= get_field('students_title');
+$students_image	= get_field('students_image');
+$students_quote	= get_field('students_quote');
+
 get_header('requestinfo'); ?>
+
 <!--Get Page Banner-->
-<div class="banner contain-to-grid sticky">
-	<div class="row" data-topbar role="navigation" data-options="sticky_on: large">
-		<div class="large-4 medium-4 columns">
-			<a href="http://www.germanna.edu" class="logo">Germanna Community College</a>
-		</div>
-	</div>
+<div class="banner sticky">
+<div class="row" data-topbar role="navigation" data-options="sticky_on: large">
+  <div class="small-12 large-4 medium-12 columns">
+      <a href="http://www.germanna.edu" class="logo">Germanna Community College</a>
+  </div>
+</div>
 </div>
 <!--.banner-->
+
 <!--Header for page heading-->
-<div class="callout contain-to-grid">
-	<div class="row">
-		<div class="small-12 medium-8">
-			<h1><?php echo get_post_meta($post->ID, 'custom_header', true); ?></h1>
-			<p class="lead"><?php echo get_post_meta($post->ID, 'custom_lead_header', true); ?></p>
-		</div>
-	</div>
+<div class="callout">
+  <div class="row">
+  <div class="callout-content">
+  	<h1><?php echo get_post_meta($post->ID, 'custom_header', true); ?></h1>
+      <p class="lead">
+          <?php echo get_post_meta($post->ID, 'custom_lead_header', true); ?>
+      </p>
+  </div>   
+  </div>
 </div>
 <!--.header-->
+
+
+<!--Request Information Template Container-->
+
+
+
 <!--Request Information Template Container-->
 <div class="row">
-	<div class="small-12 contain-to-grid">
-		<section class="request-info">
-			<div class="row">
-				
-				<div class="medium-7 columns form-group">
-				<?php //Gets Page content
-			the_content(); ?>
-	           </div>
-			  
+<div class="contain-to-grid">
+  
+  <div class="request-info">
+     
+      <div class="row">
+              
+      <!--Request Form-->
+          <div class="small-12 medium-12 large-8 columns form-group no-padding">
+     					
+              <?php the_content(); ?>
 
+ 					</div><!--.requestform-->
 
+              
+              <!--Testimonials-->
+          <div class="small-12 medium-12 large-4 columns testimonials show-for-medium-up">
+              <div class="panel  radius">
+                  <!--Start bxslider slides-->
+                  <div class="bxslider-testimonials">
+                      <!--Bxslider Slide-->
+                      <?php $loop = new WP_Query( array( 'post_type' => 'request_info_slider', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+                      <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+                      <div class="row collapse slide-pane">
+                          <div class="small-2 medium-4 columns">
+                              <div class="thumbnail">
+                                  <?php 
+				$students_image = get_field('students_image');
+				if( !empty($students_image) ): ?>
+                                  <img src="<?php echo $students_image['url']; ?>" alt="<?php echo $students_image['alt']; ?>" />
+                                  <?php endif; ?>
+                              </div>
+                          </div>
+                          <div class="small-10 medium-8 columns student-info">
+                              <h4 class="student-name"><?php echo get_field( 'students_name' ); ?></h4>
+                              <p class="student-alumni">
+                                  <?php echo get_field( 'students_title' ); ?>
+                              </p>
+                              <div class="student-quote">
+                                  <blockquote>
+                                      <?php echo  get_field( 'students_quote' ); ?>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </div>
+                      <?php endwhile; wp_reset_query(); ?>
+                  </div>
+                  <!--end slides-->
+              </div>
+          </div><!--.testimonials-->
 
-
-			  <div class="medium-4 columns testimonials">
-						<div class="panel  radius">
-							
-							<!--Start bxslider slides-->
-							<div class="bxslider-testimonials">
-								<!--Bxslider Slide-->
-								
-								<div class="row collapse slide-pane">
-									<div class="medium-4 columns">
-										
-										<div class="thumbnail">
-											<img class="thumbnail text-left" src="<?php echo get_template_directory_uri()?>/img/jasmine-thumb.png" height="80px" width="180px">
-										</div>
-										
-									</div>
-									<div class="medium-8 columns student-info">
-										<h4 class="student-name">Jesica Perez</h4>
-										<p class="student-alumni">Germanna Graduate<br/>
-										</p>
-									</div>
-									
-									<div class="row">
-										<div class="small-12 columns student-quote">
-										<blockquote>"I have tremendous respect for Germanna and what it does for people. As a tutor, I get to see people who are a lot like I was when I started here.  IT's inspiring to see them go through the same process i did. The opportunity Germanna gives people is amazing. I don't know if I would have had the same results anywhere else."</blockquote>
-									</div>
-								</div>
-							</div>
-							<!--.bxslider slide-->
-							<!--Bxslider Slide-->
-							<div class="row collapse slide-pane">
-								<div class="medium-4 columns">
-									
-									<div class="thumbnail">
-										<img class="thumbnail text-left" src="<?php echo get_template_directory_uri()?>/img/eugene-thumb.png" height="80px" width="80px">
-									</div>
-									
-								</div>
-								
-								<div class="medium-8 columns student-info">
-									<h4 class="student-name">Eugene Triplett</h4>
-									<p class="student-alumni">Germanna Graduate<br/>
-									</p>
-								</div>
-								
-								<div class="row">
-									<div class="small-12 columns student-quote">
-									<blockquote>"For the price you pay, it's probably your best bet to start. IF you're note sure what you want to do, what you want your major to be, it's the best way to start"</blockquote>
-								</div>
-							</div>
-						</div>
-						<!--.bxslider slides-->
-					</div>
-					<!--end slides-->
-					
-				</div>
-			</div>
-			
-		</div>
-		
-	</section>
+      </div>
+  </div>
 </div>
 </div>
+
+
+
 <!--.request information-->
-
-
-
 <?php do_action( 'foundationpress_after_content' ); ?>
 <!--.content loop-->
-
 <?php get_footer(); ?>

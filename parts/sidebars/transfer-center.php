@@ -1,4 +1,4 @@
-<aside id="sidebar" class="small-12 large-4 columns  large-pull-8"> 
+<aside id="sidebar" class="small-12 large-4 columns  large-pull-8" role="complementary"> 
 <div>        
 <?php do_action( 'foundationpress_before_sidebar' ); ?>        
 <h3><?php //gets parent page title

@@ -1,6 +1,6 @@
 <?php
-require_once('library/enqueue-scripts.php');
 require_once('library/cleanup.php');
+require_once('library/enqueue-scripts.php');
 // Required for Foundation to work properly
 require_once('library/foundation.php');
 // Register all navigation menus
@@ -15,10 +15,10 @@ require_once('library/widget-areas.php');
 require_once('library/entry-meta.php');
 // Add theme support
 require_once('library/theme-support.php');
-// Add Header image
-require_once('library/custom-header.php');
 // Custom Post Types
 require_once('library/custom-post-types.php');
-// Misc Extras
-require_once('library/extras.php');
+// Theme Options
+require_once('library/theme-options.php');
+// Derigister Scripts
+require_once('library/deregister-scripts.php');
 ?>

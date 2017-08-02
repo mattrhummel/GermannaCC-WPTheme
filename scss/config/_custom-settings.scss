@@ -16,44 +16,43 @@ $font-weight-bold: bold !default;
 // b. Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
- $include-html-grid-classes: $include-html-classes;
- $include-xl-html-grid-classes: false;
-
+$include-html-grid-classes: $include-html-classes;
+$include-xl-html-grid-classes: true;
 $row-width: rem-calc(1024);
 $total-columns: 12;
-$column-gutter: rem-calc(20);
+$column-gutter: rem-calc(40);
 
 
 // Foundation color naming conventions
-$white       : #FFFFFF;
-$ghost       : #FAFAFA;
-$snow        : #F9F9F9;
-$vapor       : #F6F6F6;
-$white-smoke : #F6F6F6;
-$silver      : #EFEFEF;
-$smoke       : #EEEEEE;
-$gainsboro   : #DDDDDD;
-$iron        : #CCCCCC;
-$base        : #AAAAAA;
-$aluminum    : #999999;
-$jumbo       : #888888;
-$monsoon     : #777777;
-$steel       : #666666;
-$charcoal    : #555555;
-$tuatara     : #444444;
-$oil         : #333333;
-$jet         : #222222;
-$black       : #000000;
+$white: #fff;
+$ghost: #fafafa;
+$snow: #f9f9f9;
+$vapor: #f6f6f6;
+$white-smoke: #f6f6f6;
+$silver: #efefef;
+$smoke: #eee;
+$gainsboro: #ddd;
+$iron: #ccc;
+$base: #aaa;
+$aluminum: #999;
+$jumbo: #888;
+$monsoon: #777;
+$steel: #666;
+$charcoal: #555;
+$tuatara: #231f20;
+$oil: #333;
+$jet: #222;
+$black: #000;
+$mustard: #e6b034;
 
 // We use these as default colors throughout
-$primary-color: #AD1B31;
-$secondary-color: #E6B034;
+$primary-color: #a30a35;
+$secondary-color: #231f20;
 $alert-color: #f04124;
-$success-color: #43AC6A;
+$success-color: #43ac6a;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
-
-$anchor-font-color: #2980b9;
+$anchor-font-color: #1a7db7;
 $anchor-font-color-hover: $primary-color;
 
 // We use these to control various global styles
@@ -77,12 +76,12 @@ $header-bottom-margin: .5rem;
 $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(32);
-$h2-font-size: rem-calc(28);
-$h3-font-size: rem-calc(26);
-$h4-font-size: rem-calc(24);
-$h5-font-size: rem-calc(22);
-$h6-font-size: rem-calc(20);
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(24);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(18);
+$h6-font-size: rem-calc(16);
 
 // These control how subheaders are styled.
 $subheader-line-height: 1.4;
@@ -189,29 +188,27 @@ $shiny-edge-active-color: rgba($black, .2);
 $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color:  $tuatara;
-$topbar-bg:  $tuatara;
+$topbar-bg-color: $primary-color;
+$topbar-bg: $primary-color;
 
 // Height and margin
 $topbar-height: rem-calc(60);
 $topbar-margin-bottom: 0;
 
 // Style the top bar dropdown elements
- $topbar-dropdown-bg: $ghost;
- $topbar-dropdown-link-color: $tuatara;
- $topbar-dropdown-link-bg: $smoke;
- $topbar-dropdown-link-bg-hover: $ghost;
- $topbar-dropdown-link-weight: $font-weight-normal;
- $topbar-dropdown-toggle-size: 5px;
- $topbar-dropdown-toggle-color: $tuatara;
- $topbar-dropdown-toggle-alpha: .4;
-
- $topbar-dropdown-label-color: $monsoon;
- $topbar-dropdown-label-text-transform: uppercase;
- $topbar-dropdown-label-font-weight: $font-weight-bold;
- $topbar-dropdown-label-font-size: rem-calc(10);
- $topbar-dropdown-label-bg: $oil;
-
+$topbar-dropdown-bg: $ghost;
+$topbar-dropdown-link-color: $tuatara;
+$topbar-dropdown-link-bg: $smoke;
+$topbar-dropdown-link-bg-hover: $ghost;
+$topbar-dropdown-link-weight: $font-weight-normal;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: $tuatara;
+$topbar-dropdown-toggle-alpha: .4;
+$topbar-dropdown-label-color: $monsoon;
+$topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-font-weight: $font-weight-bold;
+$topbar-dropdown-label-font-size: rem-calc(10);
+$topbar-dropdown-label-bg: $oil;
 $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
 $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
 
@@ -224,13 +221,11 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 $f-dropdown-bg: $primary-color;
 
 // Media query breakpoints
-$small-breakpoint:  em-calc(640);
+$small-breakpoint: em-calc(640);
 $medium-breakpoint: em-calc(1024);
-$topbar-breakpoint: em-calc(0);
-$large-breakpoint:  em-calc(1440);
+$large-breakpoint: em-calc(1440);
 $xlarge-breakpoint: em-calc(1920);
-
-$row-width: 94%;
+$row-width: 92%;
 
 
 
@@ -238,17 +233,16 @@ $row-width: 94%;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 $include-html-accordion-classes: $include-html-classes;
-
- $accordion-navigation-padding: rem-calc(10);
- $accordion-navigation-bg-color: $primary-color;
+$accordion-navigation-padding: rem-calc(10);
+$accordion-navigation-bg-color: $primary-color;
 // $accordion-navigation-hover-bg-color: $$secondary-color;
 // $accordion-navigation-active-bg-color: $tuatara;
- $accordion-navigation-font-color: $white;
+$accordion-navigation-font-color: $white;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $header-font-family;
 
 $accordion-content-padding: ($column-gutter/1);
- $accordion-content-active-bg-color: $white;
+$accordion-content-active-bg-color: $white;
 
 // We use these to style the icon-bar and items
 $icon-bar-bg: $oil;
@@ -271,7 +265,7 @@ $icon-bar-disabled-opacity: .7;
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
- $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
@@ -285,8 +279,8 @@ $icon-bar-disabled-opacity: .7;
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
- $button-font-color: $white;
- $button-font-color-alt: $white;
+$button-font-color: $white;
+$button-font-color-alt: $white;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
@@ -300,8 +294,8 @@ $button-function-factor: -20%;
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
- $button-bg-color: $primary-color;
- $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-bg-color: $primary-color;
+$button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
@@ -334,7 +328,7 @@ $sub-nav-list-padding-top: rem-calc(15);
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
- $include-html-table-classes: $include-html-classes;
+$include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
 $table-bg: $vapor;
@@ -361,20 +355,20 @@ $table-foot-padding: $table-head-padding;
 
 // These control the caption
 // table-caption-bg: transparent;
-   $table-caption-font-color: $table-head-font-color;
-   $table-caption-font-size: rem-calc(16);
-   $table-caption-font-weight: bold;
+$table-caption-font-color: $table-head-font-color;
+$table-caption-font-size: rem-calc(16);
+$table-caption-font-weight: bold;
 
 // These control the row padding and font styles
-   $table-row-padding: rem-calc(9 10);
-   $table-row-font-size: rem-calc(14);
-   $table-row-font-color: $jet;
-   $table-line-height: rem-calc(18);
+$table-row-padding: rem-calc(9 10);
+$table-row-font-size: rem-calc(14);
+$table-row-font-color: $jet;
+$table-line-height: rem-calc(18);
 
 // These are for controlling the layout, display and margin of tables
- $table-layout: auto;
- $table-display: table-cell;
- $table-margin-bottom: rem-calc(20);
+$table-layout: auto;
+$table-display: table-cell;
+$table-margin-bottom: rem-calc(20);
 
 
 
@@ -397,7 +391,6 @@ $tabs-vertical-navigation-margin-bottom: 1.25rem;
 
 // Off Canvas Tab Bar Variables
 $include-html-off-canvas-classes: $include-html-classes;
-
 $tabbar-bg: $white;
 $tabbar-height: rem-calc(45);
 $tabbar-icon-width: $tabbar-height;
@@ -440,10 +433,8 @@ $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
 $off-canvas-overlay-transition: background 300ms ease-in !default;
 $off-canvas-overlay-cursor: pointer !default;
 $off-canvas-overlay-box-shadow: none;
-$off-canvas-overlay-background: rgba($white, 0.0) !default;
-$off-canvas-overlay-background-hover: rgba($white, 0.00) !default;
-
-
+$off-canvas-overlay-background: rgba($white, .0) !default;
+$off-canvas-overlay-background-hover: rgba($white, .00) !default;
 $include-html-nav-classes: $include-html-classes;
 
 // We use these to control margin and padding

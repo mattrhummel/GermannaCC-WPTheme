@@ -1,4 +1,4 @@
-<aside class="right-off-canvas-menu" aria-hidden="true">
+<aside class="right-off-canvas-menu" aria-hidden="true"> 
 
 	<div class="mobile-search">
 

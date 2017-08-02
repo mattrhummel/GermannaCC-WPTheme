@@ -2,7 +2,7 @@
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<title><?php if ( is_category() ) {
 			echo 'Category Archive for &quot;'; single_cat_title(); echo '&quot; | '; bloginfo( 'name' );
 		} elseif ( is_tag() ) {
@@ -50,5 +50,5 @@
 		<div id="skip"><a href="#main">Skip To Main Content</a></div>
 		<?php do_action( 'foundationpress_after_body' ); ?>
 		
-	    <?php do_action( 'foundationpress_after_header' ); ?>
-	    <section>
+		<?php do_action( 'foundationpress_after_header' ); ?>
+		<section>

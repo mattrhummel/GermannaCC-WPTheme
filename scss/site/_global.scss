@@ -1,27 +1,64 @@
 /*
  Global styles for FoundationGermanna
 */
-
-// Prettify type rendering
 body {
+    padding: 0;
+    padding-bottom: 40px;
+
+    -webkit-font-smoothing: antialiased !important;
     -webkit-font-smoothing: antialiased;
+
+    background-color: $white;
+
     text-rendering: optimizeLegibility;
-    padding-bottom: 120px;
 }
 
-section > div.row > div.small-12.medium-8.medium-push-4.large-8.columns.large-push-4 > article {
-    padding-bottom: 150px;
+div.small-12.medium-8.medium-push-4.large-8.columns.large-push-4 > article {
+    padding-bottom: 40px;
 }
-// Reset margin and padding on figure element
+.row {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
 figure {
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 210% !important;
+}
+
+h2 {
+    font-size: 168% !important;
+}
+
+h3 {
+    font-size: 145% !important;
+}
+
+h4 {
+    font-size: 125% !important;
+}
+
+h5 {
+    font-size: 115% !important;
+}
+
+h6 {
+    font-size: 105% !important;
 }
 
 // Add some basic styling for figcaption element
 figcaption {
-    margin-bottom: rem-calc(20);
     margin-top: rem-calc(10);
+    margin-bottom: rem-calc(20);
+
     color: #6f6f6f;
 }
 
@@ -34,8 +71,19 @@ figcaption {
 .breadcrumbs {
     background: $ghost;
 }
+.entry-content a {
+    font-weight: 600;
+}
 
-// Add the alignment classes used by the WordPress media library
+.entry-content a:hover {
+    text-decoration: underline;
+}
+.center-block {
+    display: block;
+    width: 100%;
+}
+/* Add the alignment classes used by the WordPress media library */
+
 .alignleft,
 .alignright {
     float: left;
@@ -47,10 +95,12 @@ article ul {
 
 .aligncenter {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
-
+.visually-hidden {
+    display: none;
+}
 blockquote.alignleft,
 img.alignleft {
     margin: rem-calc(7) rem-calc(24) rem-calc(7) 0;
@@ -61,61 +111,136 @@ img.alignleft {
 }
 
 .pricing-table.mobile-hide {
-    display: none
+    display: none;
 }
 
 blockquote.alignright,
 img.alignright {
     margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
-
+.no-margin-left {
+    padding-left: 0;
+    margin-left: 0;
+}
+.no-margin-bottom {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
 p > a.button > i {
     padding: 8px 16px 4px 0;
+
     font-size: 1.2em;
 }
 
+.pricing-table {
+    list-style: none;
+
+    text-align: center;
+}
+
+.pricing-table li.title,
+.pricing-table li.bullet-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.pricing-table li.title {
+    padding: 10px 0;
+
+    color: #fff;
+}
+
+.pricing-table li.bullet-item {
+    padding: 10px 0;
+}
+
+.fancy {
+    line-height: .5;
+
+    text-align: center;
+}
+
+.fancy span {
+    position: relative;
+
+    display: inline-block;
+}
+
+.fancy span:before,
+.fancy span:after {
+    position: absolute;
+    top: 10px;
+
+    width: 280px;
+
+    content: "";
+
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+.fancy span:before {
+    right: 100%;
+
+    margin-right: 15px;
+}
+
+.fancy span:after {
+    left: 100%;
+
+    margin-left: 15px;
+}
+.entry-content {
+    padding: 0 10px;
+    margin-top: 20px;
+}
 //Skip to top button
 #skip a {
     position: absolute;
-    left: -10000px;
     top: auto;
+    left: -10000px;
+
     width: 1px;
     height: 1px;
-    overflow: hidden
+    overflow: hidden;
 }
+
 h2 {
     text-transform: none !important;
 }
+
 #skip a:focus {
     position: static;
+
     width: auto;
-    height: auto
+    height: auto;
 }
+
+
+/*Back to top styling*/
 
 .scroll-top-wrapper {
     position: fixed;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    text-align: center;
-    z-index: 99999999;
-    background-color: $primary-color;
-    color: $smoke;
-    width: 50px;
-    height: 48px;
-    line-height: 48px;
     right: 30px;
     bottom: 30px;
-    padding-top: 2px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    z-index: 99999999;
+
+    visibility: hidden;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+
+    line-height: 32px;
+
+    -webkit-transition: all .5s ease-in-out;
+       -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+         -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+    text-align: center;
+
+    opacity: 0;
+    color: $smoke;
+    border-radius: 100%;
+    background-color: $primary-color;
 }
 
 .scroll-top-wrapper:hover {
@@ -124,10 +249,12 @@ h2 {
 
 .scroll-top-wrapper.show {
     visibility: visible;
+
     cursor: pointer;
-    opacity: 1.0
+
+    opacity: 1.0;
 }
 
-.scroll-top-wrapper i.fa {
+.scroll-top-wrapper span.fa {
     line-height: inherit;
 }

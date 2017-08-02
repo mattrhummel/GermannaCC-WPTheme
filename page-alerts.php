@@ -9,34 +9,28 @@ get_header(); ?>
 <!--.banner-->
 <!--Content loop-->
 <div class="row">
-	<!--Get Breadcrumbs-->
-	<?php get_template_part( 'parts/breadcrumbs' ); ?>
-	<!--.breadcrumbs-->
-	<?php // Gets the alert custom post type id for each sub page needing special announcement
-	$post_id = 5452;
-	$queried_post = get_post($post_id);
-	$content = $queried_post->post_content;
-	$content = apply_filters('the_content', $content);
-	if ($content) {
-		
-	echo "<div class='alert-box alert'>";
-		echo "$content";
-		echo "<a href='#' class='close'><i class='icon-remove-circle'></i></a></div>";
-						
-		}
-		else {
-			
-			
-		}
-		?>
-		
-		
-		<!--Get Content-->
-		<?php get_template_part( 'parts/content' ); ?>
-		<!--.breadcrumbs-->
-		
-		<!--Get Page Sidebars-->
-		<?php get_template_part( 'parts/sidebars/about-sidebar' ); ?>
-		<!--.sidebars-->
-	</div>
-	<?php get_footer(); ?>
+<div class="container">
+	
+
+
+<?php // Gets the alert custom post type id for each sub page needing special announcement
+$post_id = 5452;
+$queried_post = get_post($post_id);
+			$content = $queried_post->post_content;
+			$content = apply_filters('the_content', $content);
+			if ($content) { ?>
+<div class='alert-box alert'>
+<?php echo "$content"; ?>
+<a href='#' class='close' aria-hidden="true" role="button"><span class='icon-remove-circle'></span></a></div>
+<?php
+}
+else {
+}
+?>
+
+<?php get_template_part( 'parts/content' ); ?>
+<?php get_template_part( 'parts/sidebars/about-sidebar' ); ?>
+
+</div>
+</div>
+<?php get_footer(); ?>

@@ -1,94 +1,112 @@
 .footer {
-    font-size: 1.2rem;
     padding: 2rem 0;
+
+    font-size: 1.2rem;
+
     background-color: $primary-color;
     &.bottom-footer {
-        background-color: $jet;
         padding: 1rem 0;
+
+        background-color: $jet;
     }
     h3,
     h4 {
-        color: $white;
         margin: 0 0 20px 0;
+
+        color: $white;
         &.slogan {
-            font: 800 1.8rem;
-            padding: 0 0 20px 0;
             display: block;
+            padding: 0 0 20px 0;
+
+            font: 800 1.8rem;
         }
     }
     h4 {
-        font-size: 1.2rem;
         padding: 5px 0 0 0;
-        color: $white !important;
+
+        font-size: 1.2rem;
         font-weight: 800 !important;
+
+        color: $white !important;
     }
     p {
         &.copywrite {
-            color: $white;
-            font: 800 .875em $header-font-family;
-            margin: 0;
             padding: 0;
+            margin: 0;
+
+            font: 800 .875em $header-font-family;
+
+            color: $white;
         }
         p a {
             color: $secondary-color;
         }
     }
     .links {
-        list-style: none;
         padding: 0;
         margin: 0 0 20px 0;
+
+        list-style: none;
+
+        background-color: $primary-color;
     }
     .links li {
         padding: 0 10px 0 0;
         margin: 0;
     }
     .links li a {
-        list-style: none;
-        font: 800 .8em $header-font-family;
-        text-align: left;
-        color: $white;
         padding: 0;
         margin: 0;
-        transition: all 0.2s ease-in-out;
+
+        font: 800 .8em $header-font-family;
+        list-style: none;
+
+        transition: all .2s ease-in-out;
+        text-align: left;
+
+        color: $white;
         &:hover {
             text-decoration: underline;
-            color: $secondary-color;
+
+            color: $mustard;
         }
     }
 }
 
-.footer > div.row > div.small-12.medium-12.large-12.columns > div.small-12.large-4.columns > div.textwidget {
-    font-size: 1.2rem;
+footer.footer > div#FooterImportantLinks.row div.textwidget {
     padding: 5px 0 20px 0;
-    color: $white !important;
-    font-weight: 800 !important;
+
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    color: $white;
+    background: $primary-color;
 }
 
-.footer > div.row > div.small-12.medium-12.large-12.columns.no-margin > div.small-12.large-8.columns.no-margin > h3 {
+.footer h3 {
     margin-bottom: 20px;
 }
 
-.footer>div.row>div.small-12.medium-12.large-12.columns>div.small-12.large-4.columns>div.textwidget {
-    background: $primary-color;
-    color: $white;
-}
-
-footer.footer>div.row>div.small-12.medium-12.large-12.columns>div.small-12.large-4.columns>h4>div.textwidget {
-    background-color: $primary-color;
-    color: $white;
-}
-
 .footer-copyright {
-    background-color: $tuatara;
+    position: relative;
+
     padding-top: 12px;
+
+    background-color: $tuatara;
 }
 
 .footer-copyright p {
-    color: $white;
+    display: block;
+    width: 100%;
+
     font-size: .8em;
+
+    color: $white;
 }
 
 .footer-copyright p a {
+    font-weight: 800;
+
     color: $white;
 }
 
@@ -97,101 +115,119 @@ footer.footer>div.row>div.small-12.medium-12.large-12.columns>div.small-12.large
 }
 
 .social-icons {
-    overflow: auto;
-    margin: 40px 0 20px 0;
     padding: 0;
+    margin: 40px 0 20px 0;
+    overflow: auto;
 }
 
 .social-icons li {
-    list-style-type: none;
     float: left;
+
+    list-style-type: none;
 }
 
-.social-icons li a i {
-    background: $white;
-    color: $primary-color;
+.social-icons li a span {
     width: 40px;
     height: 40px;
-    border-radius: 20px;
-    font-size: 25px;
-    text-align: center;
-    margin-right: 10px;
     padding-top: 15%;
-    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+
+    font-size: 25px;
+
+    transition: all .2s ease-in-out;
+    text-align: center;
+
+    color: $primary-color;
+    border-radius: 20px;
+    background: $white;
 }
 
 //footer social icons
 .social-icons {
-    overflow: auto;
-    margin: 0 0 20px 0;
     padding: 0;
+    margin: 0 0 20px 0;
+    overflow: auto;
 }
 
 .social-icons li {
-    list-style-type: none;
     float: left;
+
+    list-style-type: none;
 }
 
-.social-icons li a i {
-    background: $white;
-    color: $primary-color;
+.social-icons li a span {
     width: 40px;
     height: 40px;
-    border-radius: 20px;
-    font-size: 25px;
-    text-align: center;
-    margin-right: 10px;
     padding-top: 15%;
-    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+
+    font-size: 25px;
+
+    transition: all .2s ease-in-out;
+    text-align: center;
+
+    color: $primary-color;
+    border-radius: 20px;
+    background: $white;
 }
 
-.social-icons li a i:hover {
-    background: $secondary-color;
+.social-icons li a span:hover {
+    background: $mustard;
 }
 
 .fa-facebook {
-    background: #3b5998
+    background: #3b5998;
 }
 
 .fa-linkedin {
-    background: #007bb6
+    background: #007bb6;
 }
 
 .fa-twitter {
-    background: #00aced
+    background: #00aced;
 }
 
 .google-plus {
-    background: #dd4b39
+    background: #dd4b39;
 }
 
-social-icons li a i:hover {
+social-icons li a span:hover {
     opacity: .7;
 }
 
 .logos {
-    margin: 20px 0 0 0;
-    padding: 0;
     float: left;
+    padding: 0;
+    margin: 20px 0 0 0;
+
+    background-color: $primary-color;
+
     li {
         padding: 0;
         margin: 0;
     }
+
+    a {
+        color: #fff;
+    }
 }
 
 .footer-logos {
-    text-indent: -9999px;
     display: block;
     padding: 0;
     margin: 0;
+
     text-align: left;
+    text-indent: -9999px;
 }
 
 a.tips {
-    background: url(../assets/img/tipslogo.png) no-repeat center center;
     width: 132px;
     height: 52px;
-    transition: all 0.2s ease-in-out;
+
+    transition: all .2s ease-in-out;
+
+    background: url(../assets/img/tipslogo.png) no-repeat center center;
 }
 
 a.tips:hover {

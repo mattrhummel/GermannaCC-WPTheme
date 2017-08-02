@@ -4,13 +4,12 @@ Template Name: Left Sidebar
 */
 get_header(); ?>
 <div class="row">
-    <div class="small-12 large-8 large-push-4 columns" role="main">
+    <main class="small-12 large-8 large-push-4 columns" id="main" role="main">
         <?php do_action( 'foundationpress_before_content' ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-            <header>
-                <h1 class="entry-title"><?php the_title(); ?></h1>
-            </header>
+            <?php the_title('<header>
+            <h1 class="entry-title">', '</h1> </header>'); ?>
             <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
             <div class="entry-content">
                 <?php the_content(); ?>
@@ -25,7 +24,7 @@ get_header(); ?>
         </article>
         <?php endwhile;?>
         <?php do_action( 'foundationpress_after_content' ); ?>
-    </div>
+    </main>
     <?php get_sidebar( 'left' ); ?>
 </div>
 <?php get_footer(); ?>

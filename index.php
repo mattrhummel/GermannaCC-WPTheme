@@ -7,7 +7,7 @@
 </div>
 <!--.noimagebanner-->
 <div class="row single-post-article" >
-	<div class="small-12 medium-8 medium-push-4 large-8 columns large-push-4" role="main">
+	<main class="small-12 medium-8 medium-push-4 large-8 columns large-push-4"  id="main">
 		
 		<?php if ( have_posts() ) : ?>
 		<?php do_action( 'foundationpress_before_content' ); ?>
@@ -26,8 +26,8 @@
 		<?php } ?>
 		<?php do_action( 'foundationpress_after_content' ); ?>
 		
-	</div>
-	
+</main>
+
 	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

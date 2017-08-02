@@ -3,11 +3,13 @@
 <!--Page Sub Banner-->
 
 <div class="row" role="banner">
+<div class="container">
+
 <div class="small-12 large-12 columns"  role="main">
 
-<h1>Search Results</h1>
+<?php the_title( '<h1>', '</h1>' ); ?>
 
-
+</div>
 </div>
 </div>
 
@@ -15,7 +17,8 @@
 
 
 <div class="row">
-    
+    <div class="container">
+
   <div class="small-12 large-12 columns" role="main">
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
@@ -44,6 +47,6 @@
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-
+</div>
 
 <?php get_footer(); ?>

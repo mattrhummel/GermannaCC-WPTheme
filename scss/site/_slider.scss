@@ -1,19 +1,3 @@
-/**
- * bxSlider v4.2.5
- * Copyright 2013-2015 Steven Wanderski
- * Written while drinking Belgian ales and listening to jazz
-
- * Licensed under MIT (http://opensource.org/licenses/MIT)
- */
-
-
-/** VARIABLES 
-===================================*/
-
-
-/** RESET AND LAYOUT
-===================================*/
-
 .bx-wrapper {
     padding: 0;
     *zoom: 1;
@@ -22,27 +6,39 @@
 }
 
 .bx-wrapper img {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    display: table;
     width: 100%;
-    height: auto;
-    max-height: 650px;
+    max-height: 550px;
 }
 
 .bx-content {
-    background: rgb(255, 255, 255);
     /* Fall-back for browsers that don't support rgba */
-    background: rgba(255, 255, 255, .6);
-    color: $oil;
-    bottom: 14%;
-    left: 3%;
+    color: $white;
     position: absolute;
-    width: 70%;
-    max-width: 600px;
-    height: auto;
-    padding: 10px;
+    min-width: 100%;
+    min-height: 100%;
+    bottom: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+div.bx-content .content {
+    background-color: rgba(0, 0, 0, .4) !important;
+    position: relative;
+    padding: 20px;
+}
+
+div.bx-content span.slide-title {
+    font-size: 1.2em !important;
+    border-bottom: none;
+}
+
+div.bx-content p {
+    font-size: .8em !important;
 }
 
 div.bx-content > p > a {
@@ -74,7 +70,33 @@ img.bg {
 .bgheight {
     height: 50%;
 }
+.bx-content.mobile-slider {
+    /* Fall-back for browsers that don't support rgba */
+    color: $white;
+    text-align: center;
+}
 
+div.bx-content.mobile-slider  .content {
+    background-color: $tuatara !important;
+    padding: 20px;
+}
+
+div.bx-content.mobile-slider  span.slide-title {
+    font-size: 1.2em !important;
+    border-bottom: none;
+}
+
+div.bx-content.mobile-slider  p {
+    font-size: .8em !important;
+}
+
+div.bx-content.mobile-slider  > p > a {
+    color: $primary-color;
+}
+
+div.bx-content.mobile-slider  > p > a:hover {
+    color: $secondary-color;
+}
 @media screen and (max-width: 1024px) {
     /* Specific to this particular image */
     img.bg {
@@ -86,8 +108,8 @@ img.bg {
 .bx-content h2 {
     background: none;
     font: 100 2em $header-font-family;
-    color: $oil;
     padding-top: 0;
+    color: $white;
 }
 
 .bx-viewport {
@@ -178,31 +200,13 @@ img.bg {
 
 .bx-wrapper .bx-prev {
     left: 0;
-    background: url(images/controls.png) no-repeat 0 0;
     position: absolute;
     z-index: 10000;
-}
-
-.bx-wrapper .bx-next {
-    right: 0;
-    background: url(images/controls.png) no-repeat 0 0;
-    position: absolute;
-    z-index: 10000;
-}
-
-.bx-wrapper .bx-prev {
-    left: 0;
-    background: url('../assets/img/controls.png') no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
     background-position: 0 0;
-}
-
-.bx-wrapper .bx-next {
-    right: 0;
-    background: url('../assets/img/controls.png') no-repeat -43px -32px;
 }
 
 .bx-wrapper .bx-next:hover,
@@ -212,7 +216,7 @@ img.bg {
 
 .bx-wrapper .bx-controls-direction a {
     position: absolute;
-    top: 50%;
+    top: 85%;
     margin-top: -16px;
     outline: 0;
     width: 32px;
@@ -223,6 +227,11 @@ img.bg {
 
 .bx-wrapper .bx-controls-direction a.disabled {
     display: none;
+}
+
+span#slider-prev > a.bx-prev > i.fa.fa-chevron-left,
+span#slider-next> a.bx-next> i.fa.fa-chevron-right {
+    color: $white;
 }
 
 

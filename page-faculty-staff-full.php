@@ -4,20 +4,7 @@
 Template Name: Faculty Staff Full
 */
 get_header(); ?>
-<!--Get Page Banner-->
 <?php get_template_part( 'parts/banners' ); ?>
-<!--.banner-->
-<!--programs panels-->
-<style>
-.panel ul {list-style: none;}
-.panel-img {margin-bottom: 20px;}
-.panel h3 {font-size: 1em;}
-.panel-list {list-style: none; margin:  0; padding:  0;}
-.panel-list li.  bullet-item {font-weight: 800;}
-.panel-list li.title {color: #333333; padding: 6px 0;}
-.panel-list li.bullet-item {padding: 6px 0; border-top: 1px solid #CCC;}
-.panel-list li.bullet-item a {font-size: .8em;}
-</style>
 <div class="row">
   
   <div class="small-12 medium-12 large-12 columns" role="main" id="main">
@@ -82,5 +69,4 @@ get_header(); ?>
   </div>
 </div>
 <!--.programs-->
-
 <?php get_footer(); ?>

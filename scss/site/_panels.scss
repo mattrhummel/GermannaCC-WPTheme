@@ -1,5 +1,16 @@
+.equal-panel {
+    min-width: 100%;
+    min-height: 350px;
+    margin-right: 0;
+}
+
 .home-panels {
     position: relative;
+
     padding: 0;
     margin: 0;
+}
+
+.panel p {
+    font-size: 1em;
 }

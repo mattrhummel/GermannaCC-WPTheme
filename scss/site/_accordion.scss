@@ -1,59 +1,103 @@
 .accordion.yourcustomclass {
-	margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-.accordion.yourcustomclass > dd > a  {
-	padding: 10px 0 10px 40px;
-	margin: 0 0 1px 0;
-	font-weight: 800;
-	background: url("../assets/img/acc-closed.png") 10px 10px  no-repeat $primary-color;
+
+
+.accordion.yourcustomclass > dd > a,
+.accordion.yourcustomclass > li > a {
+    position: relative;
+
+    padding: 14px 0 10px 10px;
+    margin: 0 0 4px 0 !important;
+
+    font-weight: 400;
+
+    text-decoration: none;
+
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    background-color: $white-smoke;
 }
-.accordion.yourcustomclass > dd > a:hover, .accordion.yourcustomclass > dd.active > a {
-	background-color: $secondary-color;
-	color: $white;
-	font-weight: 800;	
+
+.accordion.yourcustomclass > dd > a:before,
+.accordion.yourcustomclass > li > a:before {
+    position: absolute;
+    top: 20%;
+    right: 10px;
+
+    font-family: FontAwesome;
+    font-size: 1.4em;
+
+    content: "\f055";
 }
+
+.accordion dd.active a {
+    background: none;
+}
+
+.accordion.yourcustomclass > dd > a:hover,
 .accordion.yourcustomclass > dd.active > a {
+    font-weight: 800;
 
-
-	background: url("../assets/img/acc-open.png") 10px 15px no-repeat $secondary-color ;
+    color: $white;
+    background-color: $secondary-color;
 }
 
-.accordion.yourcustomclass > dd.active > .content  {
-
-	padding: 40px 0 40px 20px;
-	background-color: $ghost;
+.accordion.yourcustomclass > dd.active > a {
+    color: $white;
+    background-color: $jumbo;
 }
+
+.accordion.yourcustomclass > dd.active > a:before {
+    position: absolute;
+    top: 20%;
+    right: 10px;
+
+    font-family: FontAwesome;
+
+    content: "\f056";
+}
+
+.accordion.yourcustomclass > dd.active > .content {
+    padding: 0 20px;
+
+    background-color: #fff;
+}
+
 .accordion.yourcustomclass > dd.active > .content.active {
-	
-	padding: 30px 20px;
-	
-	p  {
-		
-		display: block;
-		font-size: 1em;
-	}
-	
+    padding: 0;
+    p {
+        display: block;
+
+        font-size: 1em;
+    }
 }
-.accordion.yourcustomclass > dd > .content > div.row  {
-	padding: 20px;
-	
+
+.accordion.yourcustomclass > dd > .content > div.row {
+    padding: 20px;
 }
-.accordion.yourcustomclass > dd.active > .content.active > table > tbody > tr > td > a, .accordion.yourcustomclass > dd.active > .content.active > p > a  {
-	background: none;
-	font-weight: 800;
-	}
+
+.accordion.yourcustomclass > dd.active > .content.active > table > tbody > tr > td > a .accordion.yourcustomclass > dd.active > .content.active > p > a {
+    font-weight: 800;
+
+    background: none;
+}
+
 .accordion.yourcustomclass > dd.active > div.content.active > table > tbody > tr > td > p > a {
-	font-weight: 800;
+    font-weight: 800;
 }
-table.workshop-table > tbody > tr > td > a  {
-  background: none;
-  font-weight: 800;	
-  background-color: none;
+
+table.workshop-table > tbody > tr > td > a {
+    font-weight: 800;
+
+    background: none !important;
+    background-color: none !important;
 }
-.accordion.yourcustomclass > dd.active > div.content.active > p > a.button{
-	background: $primary-color;
+
+.accordion.yourcustomclass > dd.active > div.content.active > p > a.button {
+    background: $primary-color;
 }
 
 .accordion.yourcustomclass > dd.active > div.content.active > p > a.button:hover {
-	background: $secondary-color;
+    background: $secondary-color;
 }

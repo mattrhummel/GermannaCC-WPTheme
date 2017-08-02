@@ -1,27 +1,33 @@
 <?php get_header(); ?>
 
 <div class="row single-post-article no-padding-left" >
+<div class="container">
+
     <div class="small-12 large-12 columns no-padding-left" role="main">
-        
-        
+
+
+<?php get_template_part( 'parts/custom-banners/highlights-single-page' ); ?>
+
+          
     <?php while ( have_posts() ) : the_post(); ?>
     
          <article <?php post_class() ?> id="post-<?php the_ID(); ?>" >
 			<?php do_action( 'foundationpress_before_content' ); ?>
             
-            
-           <header>
-                <h1 class="no-margin-top"><?php the_title(); ?></h1>
-               
-                	<?php foundationpress_entry_meta(); ?>
-                
-                <?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-		 </header>
         
 <div class="small-12 medium-8 medium-push-4 large-8 columns large-push-4" role="main">
         
-     
-             <?php the_content(); ?>
+      <header>
+                <h2><?php the_title(); ?></h2>
+                               
+                <?php do_action( 'foundationpress_post_before_entry_content' ); ?>
+
+                      <p>Post was written by <strong>Mike Zitz</strong> on <strong><?php the_date(); ?></strong></p>
+     </header>
+
+     <hr >
+
+<?php the_content(); ?>
               
               
               	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
@@ -76,6 +82,8 @@ dynamic_sidebar( 'sidebar-widgets' ); ?>
                 
         </div>
         </div>
+        </div>
+        
         
         
 <!--.content loop-->

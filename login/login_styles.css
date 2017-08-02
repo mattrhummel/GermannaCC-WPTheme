@@ -1,0 +1,126 @@
+/* Change background color and font family */
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background: url('sebic-highlights-image.jpg') center center no-repeat fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    overflow: hidden;
+}
+
+
+/*Remove Top Padding*/
+
+header#masthead {
+    padding-top: 0;
+}
+
+
+/* Change Width and Height of Logo Image + Add Custom Image File */
+
+.login h1 a {
+    background-image: url(gcc-logo-white.png);
+    width: 300px;
+    height: 90px;
+    background-size: 264px 90px;
+}
+
+
+/*Style the login form text*/
+
+div#login > p > a {
+    color: #E6B034;
+    text-decoration: none;
+}
+
+div#login > p > a:hover {
+    color: #f7b62a;
+    text-decoration: underline;
+}
+
+div#login > p#nav > a {
+    color: #E6B034;
+    text-decoration: none;
+}
+
+div#login > p#nav > a:hover {
+    color: #f7b62a;
+    text-decoration: underline;
+}
+
+
+/*Remove Back To*/
+
+.login #backtoblog a {
+    display: none;
+}
+
+
+/*Style the login form container*/
+
+#login {
+    width: 400px;
+    padding: 20px 20px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+
+/* Add a few changes to the color and style of form itself */
+
+.login label {
+    color: #454545;
+    display: block;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+
+/*Style the actual form box*/
+
+.login form {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(207, 203, 207, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(207, 203, 207, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(207, 203, 207, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(207, 203, 207, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(207, 203, 207, 1) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(207, 203, 207, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfcbcf', GradientType=1);
+}
+
+.login form .input {
+    font-weight: normal;
+}
+
+.login #backtoblog a,
+.login #nav a {
+    color: #ffffff;
+}
+
+.login #backtoblog a:hover,
+.login #nav a:hover {
+    color: #E6B034;
+}
+
+
+/*Style the login form button*/
+
+.wp-core-ui .button-primary {
+    background: #a30a35;
+    border: none;
+    border-bottom: none;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.wp-core-ui .button-primary:hover {
+    background: #E6B034;
+    border-bottom: none;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+}

@@ -10,6 +10,22 @@ function foundationpress_theme_support() {
 	// set_post_thumbnail_size(150, 150, false);
 	// rss thingy
 	add_theme_support( 'automatic-feed-links' );
+	// Header Video
+$defaults = array(
+	'default-image'          => '',
+	'width'                  => 1300,
+	'height'                 => 650,
+	'flex-height'            => true,
+	'flex-width'             => true,
+	'uploads'                => true,
+	'random-default'         => false,
+	'header-text'            => true,
+	'default-text-color'     => '',
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $defaults );
 	// Add post formarts support: http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat') );
 }
