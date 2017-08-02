@@ -1,0 +1,469 @@
+/*
+	My custom settings. These variables are copied from _settings.css
+	This file will only contain uncommented settings that are actually used in the theme.
+*/
+
+// We use these to define default font stacks
+$font-family-sans-serif: "Calibri", Arial, sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+// We use these to define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+
+// b. Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ $include-html-grid-classes: $include-html-classes;
+ $include-xl-html-grid-classes: false;
+
+$row-width: rem-calc(1024);
+$total-columns: 12;
+$column-gutter: rem-calc(20);
+
+
+// Foundation color naming conventions
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F6F6F6;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
+// We use these as default colors throughout
+$primary-color: #AD1B31;
+$secondary-color: #E6B034;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+
+$anchor-font-color: #2980b9;
+$anchor-font-color-hover: $primary-color;
+
+// We use these to control various global styles
+$body-bg: $white;
+$body-font-color: $jet;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-normal;
+$body-font-style: normal;
+$header-font-weight: 400;
+$header-text-rendering: optimizeLegibility;
+$topbar-link-weight: bold;
+
+// We use these to control header font styles
+$header-font-family: "Century Gothic",Calibri, Arial, sans-serif;
+$header-font-weight: bold;
+$header-font-style: normal;
+$header-font-color: #333;
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+
+// We use these to control header font sizes
+$h1-font-size: rem-calc(32);
+$h2-font-size: rem-calc(28);
+$h3-font-size: rem-calc(26);
+$h4-font-size: rem-calc(24);
+$h5-font-size: rem-calc(22);
+$h6-font-size: rem-calc(20);
+
+// These control how subheaders are styled.
+$subheader-line-height: 1.4;
+$subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+$subheader-font-weight: $font-weight-normal;
+$subheader-top-margin: .2rem;
+$subheader-bottom-margin: .5rem;
+
+// A general <small> styling
+// $small-font-size: 60%;
+// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+
+// We use these to style paragraphs
+$paragraph-font-family: inherit;
+$paragraph-font-weight: $font-weight-normal;
+$paragraph-font-size: 1.2rem;
+$paragraph-line-height: 1.6;
+$paragraph-margin-bottom: rem-calc(20);
+$paragraph-aside-font-size: rem-calc(16);
+$paragraph-aside-line-height: 1.35;
+$paragraph-aside-font-style: italic;
+$paragraph-text-rendering: optimizeLegibility;
+
+// We use these to style <code> tags
+$code-color: $oil;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $font-weight-normal;
+$code-background-color: scale-color($secondary-color, $lightness: 70%);
+$code-border-size: 1px;
+$code-border-style: solid;
+$code-border-color: scale-color($code-background-color, $lightness: -10%);
+$code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
+
+// We use these to style the <hr> element
+$hr-border-width: 1px;
+$hr-border-style: solid;
+$hr-border-color: $gainsboro;
+$hr-margin: rem-calc(20);
+
+// We use these to style lists
+$list-font-family: $paragraph-font-family;
+$list-font-size: $paragraph-font-size;
+// $list-line-height: $paragraph-line-height;
+// $list-margin-bottom: $paragraph-margin-bottom;
+// $list-style-position: outside;
+// $list-side-margin: 1.1rem;
+// $list-ordered-side-margin: 1.4rem;
+// $list-side-margin-no-bullet: 0;
+// $list-nested-margin: rem-calc(20);
+// $definition-list-header-weight: $font-weight-bold;
+// $definition-list-header-margin-bottom: .3rem;
+// $definition-list-margin-bottom: rem-calc(12);
+
+// We use these to style blockquotes
+$blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 1px solid $secondary-color;
+$blockquote-cite-font-size: rem-calc(13);
+$blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
+$blockquote-cite-link-color: $blockquote-cite-font-color;
+
+// Acronym styles
+$acronym-underline: 1px dotted $gainsboro;
+
+// We use these to control padding and margin
+// $microformat-padding: rem-calc(10 12);
+// $microformat-margin: rem-calc(0 0 20 0);
+
+// We use these to control the border styles
+// $microformat-border-width: 1px;
+// $microformat-border-style: solid;
+// $microformat-border-color: $gainsboro;
+
+// We use these to control full name font styles
+// $microformat-fullname-font-weight: $font-weight-bold;
+// $microformat-fullname-font-size: rem-calc(15);
+
+// We use this to control the summary font styles
+// $microformat-summary-font-weight: $font-weight-bold;
+
+// We use this to control abbr padding
+// $microformat-abbr-padding: rem-calc(0 1);
+
+// We use this to control abbr font styles
+// $microformat-abbr-font-weight: $font-weight-bold;
+// $microformat-abbr-font-decoration: none;
+
+
+$opposite-direction: right;
+$default-float: left;
+$last-child-float: $opposite-direction;
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 3px;
+$global-rounded: 1000px;
+
+// We use these to control inset shadow shiny edges and depressions.
+$shiny-edge-size: 0 1px 0;
+$shiny-edge-color: rgba($white, .5);
+$shiny-edge-active-color: rgba($black, .2);
+
+
+//Top bar colors
+$include-html-top-bar-classes: $include-html-classes;
+
+// Background color for the top bar
+$topbar-bg-color:  $tuatara;
+$topbar-bg:  $tuatara;
+
+// Height and margin
+$topbar-height: rem-calc(60);
+$topbar-margin-bottom: 0;
+
+// Style the top bar dropdown elements
+ $topbar-dropdown-bg: $ghost;
+ $topbar-dropdown-link-color: $tuatara;
+ $topbar-dropdown-link-bg: $smoke;
+ $topbar-dropdown-link-bg-hover: $ghost;
+ $topbar-dropdown-link-weight: $font-weight-normal;
+ $topbar-dropdown-toggle-size: 5px;
+ $topbar-dropdown-toggle-color: $tuatara;
+ $topbar-dropdown-toggle-alpha: .4;
+
+ $topbar-dropdown-label-color: $monsoon;
+ $topbar-dropdown-label-text-transform: uppercase;
+ $topbar-dropdown-label-font-weight: $font-weight-bold;
+ $topbar-dropdown-label-font-size: rem-calc(10);
+ $topbar-dropdown-label-bg: $oil;
+
+$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+
+// Sticky Class
+$topbar-sticky-class: ".sticky";
+$topbar-arrows: false; //Set false to remove the triangle icon from the menu item
+$topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
+
+// We use this to control the background color
+$f-dropdown-bg: $primary-color;
+
+// Media query breakpoints
+$small-breakpoint:  em-calc(640);
+$medium-breakpoint: em-calc(1024);
+$topbar-breakpoint: em-calc(0);
+$large-breakpoint:  em-calc(1440);
+$xlarge-breakpoint: em-calc(1920);
+
+$row-width: 94%;
+
+
+
+// 01. Accordion
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$include-html-accordion-classes: $include-html-classes;
+
+ $accordion-navigation-padding: rem-calc(10);
+ $accordion-navigation-bg-color: $primary-color;
+// $accordion-navigation-hover-bg-color: $$secondary-color;
+// $accordion-navigation-active-bg-color: $tuatara;
+ $accordion-navigation-font-color: $white;
+// $accordion-navigation-font-size: rem-calc(16);
+// $accordion-navigation-font-family: $header-font-family;
+
+$accordion-content-padding: ($column-gutter/1);
+ $accordion-content-active-bg-color: $white;
+
+// We use these to style the icon-bar and items
+$icon-bar-bg: $oil;
+$icon-bar-font-color: $white;
+$icon-bar-font-color-hover: $icon-bar-font-color;
+$icon-bar-font-size: 1rem;
+$icon-bar-hover-color: $primary-color;
+$icon-bar-icon-color: $white;
+$icon-bar-icon-color-hover: $icon-bar-icon-color;
+$icon-bar-icon-size: 1.875rem;
+$icon-bar-image-width: 1.875rem;
+$icon-bar-image-height: 1.875rem;
+$icon-bar-active-color: $primary-color;
+$icon-bar-item-padding: 1rem;
+
+// We use this to set default opacity and cursor for disabled icons.
+$icon-bar-disabled-opacity: .7;
+
+
+// 05. Buttons
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ $include-html-button-classes: $include-html-classes;
+
+// We use these to build padding for buttons.
+// $button-tny: rem-calc(10);
+// $button-sml: rem-calc(14);
+// $button-med: rem-calc(16);
+// $button-lrg: rem-calc(18);
+
+// We use this to control the display property.
+// $button-display: inline-block;
+// $button-margin-bottom: rem-calc(20);
+
+// We use these to control button text styles.
+// $button-font-family: $body-font-family;
+ $button-font-color: $white;
+ $button-font-color-alt: $white;
+// $button-font-tny: rem-calc(11);
+// $button-font-sml: rem-calc(13);
+// $button-font-med: rem-calc(16);
+// $button-font-lrg: rem-calc(20);
+// $button-font-weight: $font-weight-normal;
+// $button-font-align: center;
+
+// We use these to control various hover effects.
+$button-function-factor: -20%;
+
+// We use these to control button border styles.
+// $button-border-width: 0;
+// $button-border-style: solid;
+ $button-bg-color: $primary-color;
+ $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+// $button-border-color: $button-bg-hover;
+// $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
+// $secondary-button-border-color: $secondary-button-bg-hover;
+// $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
+// $success-button-border-color: $success-button-bg-hover;
+// $alert-button-bg-hover: scale-color($alert-color, $lightness: $button-function-factor);
+// $alert-button-border-color: $alert-button-bg-hover;
+// $warning-button-bg-hover: scale-color($warning-color, $lightness: $button-function-factor);
+// $warning-button-border-color: $warning-button-bg-hover;
+// $info-button-bg-hover: scale-color($info-color, $lightness: $button-function-factor);
+// $info-button-border-color: $info-button-bg-hover;
+
+// We use this to set the default radius used throughout the core.
+// $button-radius: $global-radius;
+// $button-round: $global-rounded;
+
+// We use this to set default opacity and cursor for disabled buttons.
+// $button-disabled-opacity: .7;
+// $button-disabled-cursor: $cursor-default-value;
+
+// 28. Sub Nav
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-nav-classes: $include-html-classes;
+
+// We use these to control margin and padding
+$sub-nav-list-margin: rem-calc(-4 0 0);
+$sub-nav-list-padding-top: rem-calc(15);
+
+// 30. Tables
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ $include-html-table-classes: $include-html-classes;
+
+// These control the background color for the table and even rows
+$table-bg: $vapor;
+$table-even-row-bg: $gainsboro;
+
+// These control the table cell border style
+$table-border-style: solid;
+$table-border-size: 1px;
+$table-border-color: $gainsboro;
+
+// These control the table head styles
+$table-head-bg: $primary-color;
+$table-head-font-size: rem-calc(14);
+$table-head-font-color: $white;
+$table-head-font-weight: $font-weight-bold;
+$table-head-padding: rem-calc(8 10 10);
+
+// These control the table foot styles
+$table-foot-bg: $table-head-bg;
+$table-foot-font-size: $table-head-font-size;
+$table-foot-font-color: $table-head-font-color;
+$table-foot-font-weight: $table-head-font-weight;
+$table-foot-padding: $table-head-padding;
+
+// These control the caption
+// table-caption-bg: transparent;
+   $table-caption-font-color: $table-head-font-color;
+   $table-caption-font-size: rem-calc(16);
+   $table-caption-font-weight: bold;
+
+// These control the row padding and font styles
+   $table-row-padding: rem-calc(9 10);
+   $table-row-font-size: rem-calc(14);
+   $table-row-font-color: $jet;
+   $table-line-height: rem-calc(18);
+
+// These are for controlling the layout, display and margin of tables
+ $table-layout: auto;
+ $table-display: table-cell;
+ $table-margin-bottom: rem-calc(20);
+
+
+
+// 31. Tabs
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// $include-html-tabs-classes: $include-html-classes;
+
+$tabs-navigation-padding: rem-calc(13);
+$tabs-navigation-bg-color: $primary-color;
+$tabs-navigation-active-bg-color: $primary-color;
+$tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
+$tabs-navigation-font-color: $white;
+$tabs-navigation-active-font-color: $tabs-navigation-font-color;
+$tabs-navigation-font-size: rem-calc(16);
+$tabs-navigation-font-family: $body-font-family;
+$tabs-content-margin-bottom: rem-calc(24);
+$tabs-content-padding: ($column-gutter/2);
+$tabs-vertical-navigation-margin-bottom: 1.25rem;
+
+// Off Canvas Tab Bar Variables
+$include-html-off-canvas-classes: $include-html-classes;
+
+$tabbar-bg: $white;
+$tabbar-height: rem-calc(45);
+$tabbar-icon-width: $tabbar-height;
+$tabbar-line-height: $tabbar-height;
+$tabbar-color: $white;
+$tabbar-middle-padding: 0 rem-calc(10);
+// Off Canvas Divider Styles
+$tabbar-left-section-border: none;
+$tabbar-right-section-border: $tabbar-left-section-border;
+
+
+/// Off Canvas Tab Bar Variables
+//include-html-off-canvas-classes: $include-html-classes !default;
+
+$tabbar-bg: $white!default;
+$tabbar-height: rem-calc(45) !default;
+$tabbar-icon-width: $tabbar-height !default;
+$tabbar-line-height: $tabbar-height !default;
+$tabbar-color: $white !default;
+$tabbar-middle-padding: 0 rem-calc(10) !default;
+
+// Off Canvas Divider Styles
+$tabbar-left-section-border: none;
+//$tabbar-right-section-border: $tabbar-left-section-border;
+
+
+// Off Canvas Tab Bar Headers
+$tabbar-header-color: $white !default;
+$tabbar-header-weight: $font-weight-bold !default;
+$tabbar-header-line-height: $tabbar-height !default;
+$tabbar-header-margin: 0 !default;
+
+// Off Canvas Menu Variables
+$off-canvas-width: rem-calc(340) !default;
+$off-canvas-bg: $gainsboro !default;
+$off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
+$off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
+
+// Off Canvas Back-Link Overlay
+$off-canvas-overlay-transition: background 300ms ease-in !default;
+$off-canvas-overlay-cursor: pointer !default;
+$off-canvas-overlay-box-shadow: none;
+$off-canvas-overlay-background: rgba($white, 0.0) !default;
+$off-canvas-overlay-background-hover: rgba($white, 0.00) !default;
+
+
+$include-html-nav-classes: $include-html-classes;
+
+// We use these to control margin and padding
+$sub-nav-list-margin: rem-calc(0);
+$sub-nav-list-padding-top: rem-calc(4);
+
+// We use this to control the definition
+$sub-nav-font-size: rem-calc(14);
+$sub-nav-font-color: #999;
+$sub-nav-font-weight: normal;
+$sub-nav-text-decoration: none;
+$sub-nav-border-radius: 1000px;
+
+// We use these to control the active item styles
+$sub-nav-active-font-weight: bold;
+$sub-nav-active-bg: $primary-color;
+$sub-nav-active-color: #fff;
+$sub-nav-active-padding: rem-calc(0);
+$sub-nav-active-cursor: default;
+
+// We use these to the item divider
+$sub-nav-item-divider: "";
+$sub-nav-item-divider-margin: rem-calc(0);

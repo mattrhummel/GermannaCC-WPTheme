@@ -1,0 +1,614 @@
+#homepage-hero,
+#subpage-hero {
+    background: $white no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-align: left;
+    height: auto;
+    .bx-wrapper {
+        height: auto;
+    }
+    .bx-pager {
+        bottom: 80px;
+    }
+}
+
+.slider-container {
+    visibility: hidden;
+}
+
+.slider-container>div.outside {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    position: absolute;
+    z-index: 1000;
+    bottom: 60%;
+}
+
+.slider-container>div.outside>span#slider-prev>a.bx-prev,
+.slider-container>div.outside>span#slider-next>a.bx-next {
+    font-size: 4em;
+    color: $tuatara;
+    font-weight: bold;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.slider-container>div.outside>span#slider-next>a.bx-next {
+    right: 25px;
+    top: 0;
+}
+
+.slider-container>div.outside>span#slider-prev>a.bx-prev {
+    left: 25px;
+    top: 0;
+}
+
+div.slider-container>div.bx-wrapper>div.bx-controls.bx-has-pager>div.bx-pager.bx-default-pager {
+    z-index: 10000;
+}
+
+#subpage-hero {
+    max-height: 300px;
+    height: 400px;
+    padding: 180 0 0 0;
+    margin: 0 0 32 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.banner-sub-nav {
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: $tuatara;
+    padding: 0;
+    margin: 0 auto;
+    height: auto;
+    border-bottom: none;
+    overflow: hidden;
+    max-height: 76px;
+    font: 100 1em $header-font-family;
+}
+
+.icon-bar {
+    padding: 0;
+    margin: 0;
+    background: $tuatara;
+    .item {
+        text-align: left;
+        margin-bottom: 0;
+        color: $white;
+        /* Fallback for web browsers that doesn't support RGBa */
+        font-weight: bold;
+        border-left: 1px solid $monsoon;
+        border-right: 1px solid $monsoon;
+        background: $tuatara;
+    }
+    a span {
+        font-size: .8em;
+        font-weight: 100;
+        display: block;
+    }
+    a:hover.item {
+        background: $monsoon;
+        color: $white;
+    }
+}
+
+.home-intro {
+    background-color: $white;
+    margin: 0;
+    padding: 40px 0;
+    position: relative;
+}
+
+.home-features-intro {
+    background: $white;
+    margin: 0 auto;
+    padding: 20px 0;
+    font: 700 1.6em "Century Gothic", Calibri, sans-serif;
+    h2 {
+        margin: 0 0 20px 0;
+        color: $jet;
+    }
+}
+
+.home-widget-title {
+    background: none;
+    background-color: none;
+    color: $jet;
+    text-transform: uppercase;
+    padding: 0;
+    margin-bottom: 20px;
+    font: 700 1.6em "Century Gothic", Calibri, sans-serif;
+}
+
+.home-features-intro > div.textwidget {
+    background: none;
+    font: 800 1em $header-font-family;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.home-features-intro > div.textwidget > p,
+.calltos > div.row.text-center > p {
+    width: 100%;
+}
+
+
+/*Panels*/
+
+.home-panels {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+ul.feature-panels {
+    list-style: none;
+    margin: 0 10px 0 0;
+    padding: 0;
+    li {
+        a {
+            color: $white;
+            list-style: none;
+            height: 260px;
+            max-height: 260px;
+            overflow: hidden;
+            padding: 0;
+            display: block;
+            position: relative;
+        }
+        &.apply-panel {
+            background: $primary-color;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        &.apply-panel:hover {
+            background: #931629;
+        }
+        &.register-panel {
+            background: $secondary-color;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        &.register-panel:hover {
+            background: #c4942d;
+        }
+        &.payment-panel {
+            background: $success-color;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        &.payment-panel:hover {
+            background: #389359;
+        }
+        .panel-icon,
+        .panel-content,
+        .title,
+        .description {
+            width: 100%;
+            display: block;
+            padding: 10px;
+        }
+        .panel-icon {
+            padding: 30px 0 10px 0;
+        }
+        .title {
+            font-size: 1.4em;
+            font-weight: 800;
+            padding: 0;
+        }
+        .description {
+            font-size: 1em;
+            font-weight: 400;
+            padding: 0;
+        }
+    }
+}
+
+
+/**Explore Germanna Styles**/
+
+.explore-germanna {
+    padding: 80px 0 140px 0;
+    background: #DDDDDD;
+    position: relative;
+    margin: 0;
+    z-index: 1000;
+    h2 {
+        font-weight: 800px;
+        font-size: 3em;
+        color: #AD1B31;
+        margin-bottom: 80px;
+    }
+}
+
+.explore-slider-container {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 40px 0;
+    visibility: hidden;
+}
+
+.explore-slider-container > div.bx-wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+    -moz-box-shadow: 3px 3px 3px 3px #888;
+    -webkit-box-shadow: 3px 3px 3px #888;
+    box-shadow: 3px 3px 3px #888;
+}
+
+.explore-slider-container > div.bx-wrapper > div.bx-viewport {
+    width: 100%;
+    margin: 0;
+}
+
+.explore-slider-container > div.bx-wrapper > div.bx-viewport ul.bxslider2 {
+    max-height: 350px;
+    height: auto;
+    overflow: hidden;
+}
+
+.explore-slider-container > div.bx-wrapper > div.bx-viewport > ul.bxslider2 > li {
+    width: 33%;
+    max-width: 330px;
+    width: 330px;
+    padding: 0;
+    margin: 0;
+}
+
+div.bx-viewport > ul.bxslider2 > li > a {
+    width: 33%;
+    max-width: 330px;
+}
+
+div.bx-viewport > ul.bxslider2 > li > a > img {
+    width: 330px;
+    height: 220px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    border: 10px solid $white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+div.bx-viewport > ul.bxslider2 > li > a > img:hover {
+    border: 10px solid $secondary-color;
+}
+
+.explore-slider-container>div.outside>span#slider-prev2>a.bx-prev,
+.explore-slider-container>div.outside>span#slider-next2>a.bx-next {
+    font-size: 2em;
+    color: $white;
+    font-weight: bold;
+    top: 35%;
+    position: absolute;
+    background: $tuatara;
+    padding: 10px;
+    margin: 0;
+    height: auto;
+    z-index: -1;
+}
+
+.explore-slider-container>div.outside>span#slider-next2>a.bx-next {
+    right: -26px
+}
+
+.explore-slider-container>div.outside>span#slider-prev2>a.bx-prev {
+    left: -26px;
+}
+
+div.explore-slider-container>div.bx-wrapper>div.bx-controls.bx-has-pager>div.bx-pager.bx-default-pager {
+    bottom: -40px;
+}
+
+.module.parallax {
+    padding: 80px 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.module.parallax {
+    padding: 80px 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+.module.parallax-1 {
+    background-size: cover;
+    background: url(/wp-content/themes/FoundationGermanna/assets/img/sebic-highlights-image.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    position: relative
+}
+
+.module.parallax-2 {
+    background: url(/wp-content/themes/FoundationGermanna/assets/img/germanna-workforce-large.jpg) no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.highlights {
+    position: relative;
+    background: none;
+    padding: 40px 0 80px 0;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+    clear: both;
+}
+
+.highlights h2 {
+    color: #FFFFFF;
+    font: 800 3em "Century Gothic", Calibri, sans-serif;
+    margin-bottom: 60px
+}
+
+.highlights.bx-pager {
+    bottom: -20px
+}
+
+.highlights-slider-container {
+    visibility: hidden
+}
+
+.highlights-slider-container>.bx-wrapper {
+    width: 90%;
+    max-width: io0px;
+    margin: 40px auto 80px auto;
+    padding: 10px 0;
+    background: none;
+    overflow: hidden
+}
+
+.highlights-slider-container>.bx-wrapper>.bx-viewport {
+    width: 100%;
+    background: none;
+    padding: 0
+}
+
+.highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3 {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    max-height: 550px
+}
+
+.highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3.highlights-content>li {
+    width: 35.5%;
+    max-width: 355px;
+    width: 355px;
+    height: auto
+}
+
+.highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3.highlights-content>li a {
+    background: #FFFFFF;
+    width: 35.5%;
+    max-width: 355px;
+    width: 355px;
+    padding: 12px;
+    text-align: center;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    /* For IE8 and earlier */
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -kthtml-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    display: block;
+    min-height: 320px;
+    color: $oil;
+    text-decoration: none;
+}
+
+.highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3.highlights-content>li a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* For IE8 and earlier */
+}
+
+.highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3.highlights-content>li a.wf-highlights-slides {
+    min-height: 500px
+}
+
+.highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3.highlights-content>li h3 {
+    margin-bottom: 20px;
+    font-size: 1em;
+    text-align: left
+}
+
+.highlights-slider-container>div.bx-wrapper>div.bx-viewport>ul.bxslider3.highlights-content>li a:hover {
+    background: #EFEFEF
+}
+
+.highlights-slider-container>.bx-pager.bx-default-pager {
+    margin: 0;
+    left: 0
+}
+
+div.highlights-slider-container>div.outside {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    position: absolute;
+    z-index: 1000;
+    bottom: 58%
+}
+
+div.highlights-slider-container>div.outside>span#slider-prev3>a.bx-prev,
+div.highlights-slider-container>div.outside>span#slider-next3>a.bx-next {
+    font-size: 4em;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    margin: 0;
+    position: absolute
+}
+
+div.highlights-slider-container>div.outside>span#slider-next3>a.bx-next {
+    right: 0;
+    top: 0
+}
+
+div.highlights-slider-container>div.outside>span#slider-prev3>a.bx-prev {
+    left: 6px;
+    top: 0
+}
+
+div.highlights-slider-container>div.bx-wrapper>div.bx-controls.bx-has-pager>div.bx-pager.bx-default-pager {
+    bottom: 40px
+}
+
+.workforce-slides {
+    padding: 0 4px;
+    width: 30%;
+}
+
+.callto {
+    margin-top: 30px;
+    &.highlights {
+        margin-top: 80px
+    }
+}
+
+.calltos {
+    padding: 80px 0;
+    margin: 0 auto;
+    background: $white;
+    h2 {
+        background: none;
+        font-size: 1.4em;
+        font-weight: 400;
+        background-color: none;
+        padding: 0;
+    }
+    p {}
+}
+
+.intro-icons {
+    overflow: auto;
+    margin: 20px 0 20px 0;
+    padding: 20px 0 40px 0;
+    background: $white
+}
+
+.intro-icons li {
+    list-style-type: none;
+    float: left;
+}
+
+.intro-icons li a i {
+    background: $vapor;
+    color: $base;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 20px;
+    padding-top: 20%;
+    transition: all 0.2s ease-in-out;
+}
+
+.intro-icons li a i:hover {
+    background: $gainsboro;
+    color: $primary-color
+}
+
+.fa-facebook {
+    background: #3b5998
+}
+
+.fa-linkedin {
+    background: #007bb6
+}
+
+.fa-twitter {
+    background: #00aced
+}
+
+.google-plus {
+    background: #dd4b39
+}
+
+.events,
+.getting-started {
+    padding: 40px 0;
+    display: block;
+    position: relative;
+}
+
+div.events > div.small-12.medium-12.large-12.columns > div.textwidget {
+    background: $white;
+}
+
+div.eventlistside {
+    display: block;
+    background: $ghost;
+    border: 1px solid $secondary-color;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+div.entry-date {}
+
+.events > div.textwidget {
+    background: $white;
+}

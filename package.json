@@ -1,0 +1,36 @@
+{
+  "name": "foundationpress",
+  "version": "5.5.2",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "^0.18.1",
+    "grunt-string-replace": "~0.2.7",
+    "node-sass": "^2.1.1",
+    "nodemon": "^1.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olefredrik/FoundationPress.git"
+  },
+  "dependencies": {
+    "lodash": "^4.2.1",
+    "time-grunt": "^1.1.0"
+  },
+  "description": "This is a WordPress starter theme based on Foundation 5 by Zurb. The purpose of FoundationPress, is to act as a small and handy toolbox that contains the essentials needed to build any design. FoundationPress is meant to be a starting point, not the final product. If you're looking for an all-in-one theme with built-in shortcodes, plugins, fancypancy portfolio templates or whatnot, I'm afraid you have to look elsewhere.",
+  "bugs": {
+    "url": "https://github.com/olefredrik/FoundationPress/issues"
+  },
+  "homepage": "https://github.com/olefredrik/FoundationPress#readme",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Matt Hummel",
+  "license": "ISC"
+}

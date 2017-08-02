@@ -1,0 +1,14 @@
+dl.tabs > dd > a, dl.tabs > dd.active > a {
+	margin-right: 4px;
+	font-weight: 800;
+	border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+dl.tabs > dd.active > a {
+	background-color: $tuatara;
+}
+div.tabs-content > .content.active {
+	background: $ghost;
+	padding: 20px;
+	border-top: 5px solid $tuatara;
+}

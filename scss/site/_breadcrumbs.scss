@@ -1,0 +1,17 @@
+.breadcrumbs {
+    padding: 10px 0 10px 10px;
+    marging: 0;
+    background: $white;
+    background-color: $white;
+    border: none;
+    li {}
+    .breadcrumbs-description {
+        color: jet;
+        font-weight: bold;
+    }
+    a {
+        font-size: 1em;
+        font-weight: 400;
+        text-transform: none;
+    }
+}
