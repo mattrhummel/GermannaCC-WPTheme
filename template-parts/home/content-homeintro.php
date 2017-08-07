@@ -113,7 +113,7 @@ $extra_box2_url = get_field('extra_box2_url');
         <?php if ( is_active_sidebar( 'upcoming-events-widgets' ) ) : ?>
         <?php dynamic_sidebar( 'upcoming-events-widgets' ); ?>
         <?php endif; ?>
-        <a href="http://calendar.activedatax.com/germanna/CalendarNow.aspx?amp;more=1/1/0001&amp;display=Month&amp;type=public" class="button default text-center" target="_blank">View More Events</a>
+        <a href="https://calendar.activedatax.com/germanna/CalendarNow.aspx?amp;more=1/1/0001&amp;display=Month&amp;type=public" class="button default text-center" target="_blank">View More Events</a>
       </div>
       <!--.upcoming-events-->
     </div>

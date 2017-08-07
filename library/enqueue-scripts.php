@@ -11,7 +11,11 @@ wp_enqueue_script( 'outdatedbrowser', get_template_directory_uri() . '/js/outdat
 wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '4.2.12', true );
 wp_enqueue_script( 'gcc-scripts', get_template_directory_uri() . '/js/gcc-scripts.min.js', array('jquery'), '0.0.1', true );
 if (is_page (array ('request-information', 'rif-thanks')) ) {
-wp_enqueue_script( 'form-scripts', get_template_directory_uri() . '/js/form-scripts.js', array('jquery'), '0.0.1', true ); };
+wp_enqueue_script( 'form-scripts', get_template_directory_uri() . '/js/form-scripts.js', array('jquery'), '0.0.1', true );
+};
+if (is_page (array ('16776', '17285')) ) {
+wp_enqueue_script( 'nursing-app-scripts', get_template_directory_uri() . '/js/nursing-app-scripts.js', array('jquery'), '0.0.1', true );
+};
 }
 add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
 function prefix_add_footer_styles() {
@@ -21,6 +25,9 @@ wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/
 if ( is_page(array ('request-information', 'rif-thanks')) ){
 wp_enqueue_style( 'request-info', get_stylesheet_directory_uri() . '/css/request-info.css');
 wp_enqueue_style( 'testimonial-slider', get_stylesheet_directory_uri() . '/css/testimonial-slider.css');
+};
+if ( is_page(array ('16776', '17285')) ){
+wp_enqueue_style( 'nursing-app', get_stylesheet_directory_uri() . '/css/nursing-app.css');
 };
 };
 add_action( 'get_footer', 'prefix_add_footer_styles' );

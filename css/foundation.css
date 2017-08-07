@@ -7036,8 +7036,10 @@ h2 {
   bottom: 30px;
   z-index: 99999999;
   visibility: hidden;
+  width: 100%;
   width: 32px;
   height: 32px;
+  max-width: 1250px;
   overflow: hidden;
   line-height: 32px;
   -webkit-transition: all .5s ease-in-out;
