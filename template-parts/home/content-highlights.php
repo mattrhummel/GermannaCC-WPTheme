@@ -1,41 +1,47 @@
 <?php
 $highlights_heading = get_field('highlights_heading');
+$highlights_button_text = get_field('highlights_button_text');
+$highlights_button_url = get_field('highlights)_button_url');
 ?>
 <!--Germanna Highlights and Upcoming Events Row-->
 <section class="module parallax parallax-1 no-margin">
   <div class="row">
-    <div class="container">
+    <div class="container highlights">
       
-      <div class="highlights">
-        <h2 class="text-center"><?php echo $highlights_heading; ?></h2>
-        <!--Get Germanna Highlights Excerpts-->
-          <div class="highlights-slider-container">
-            <ul class="bxslider3 highlights-content">
-              <?php
-              global $post;
-              $myposts = get_posts('post');
-              foreach($myposts as $post) :
-              ?>
-              <li id="post-<?php the_ID(); ?>">
-                <a href="<?php the_permalink(); /*Get Title Link*/ ?>" title="<?php the_title_attribute();?>">
-                  <div class="content">
-                    <?php the_title('<h3>', '</h3>'); /*Get Excerpt Title*/ ?>
-                    <?php the_excerpt(); /*Display the excerpt*/ ?>
-                  </div>
-                </a>
-              </li>
-              <?php endforeach; ?>
-              <!--End the loop-->
-            </ul>
-            <div class="outside">
-              <span id="slider-prev3"></span>
-              <span id="slider-next3"></span>
-            </div>
+      <h2 class="text-center"><?php echo $highlights_heading; ?></h2>
+      
+      <?php
+      $args = array( 'post_type' => 'post', 'posts_per_page' => 4, 'orderby' => 'post_id',
+      );
+      $loop = new WP_Query( $args );
+      while ( $loop->have_posts() ) : $loop->the_post();
+      ?>
+      
+      <div class="small-12 medium-6 columns">
+        <div id="post <?php the_ID(); ?>" class="latest-post">
+          
+          <div class="content">
+            <?php the_title('<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' ); /*Get Excerpt Title*/
+            the_excerpt(); ?>
+            
           </div>
+          <div class="meta-data">
+            <hr />
+            <span class="fa fa-calendar" aria-hidden="true"></span>
+            <span class="post-date"><?php the_time('F Y'); ?></span>
+
+            <a href="<?php echo esc_url( get_permalink() )  ?>" class="button button-primary tiny pull-right" role="button" aria-label="<?php _e('read more about', 'foundationpress') ?> <?php the_title(); ?>"><?php _e('Read More', 'foundationpress') ?></a>
+
+          </div>
+        </div>
       </div>
-      <div class="row text-center">
-        <a class="button read-more" href="/blog/">More Highlights</a>
-      </div>
+      <?php endwhile; wp_reset_query(); ?>
+    </div>
+    
+  </div>
+  <div class="row text-center">
+    <div class="container">
+      <a class="button read-more" href="<?php echo $highlights_button_url; ?>"><?php echo $highlights_button_text; ?></a>
     </div>
   </div>
 </section>

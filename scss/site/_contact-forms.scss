@@ -1,0 +1,45 @@
+.wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
+    color: #990008;
+    background-color: #fff5f5;
+    border: 0;
+    padding: 10px;
+    margin: 0 0 20px 0;
+
+}
+.wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+    color: #2f520a;
+    background-color: #f2fae6;
+    border: 0;
+    padding: 10px;
+    margin: 0 0 20px 0;
+}
+span.wpcf7-not-valid-tip, 
+{
+    color: #990008 !important;
+    background-color: #fff5f5;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border-top: 5px solid $primary-color;
+
+}
+label {
+    font-weight: 800;
+}
+
+label > span.wpcf7-list-item-label {
+    font-weight: 400;
+    padding-left: 5px;
+    
+}
+
+div.wpcf7-mail-sent-ok:before,div.wpcf7-validation-errors:before {
+    font: 26px/30px FontAwesome;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+div.wpcf7-mail-sent-ok:before {
+    content: "\f00c";
+}
+div.wpcf7-validation-errors:before {
+    content: "\f00d";
+}

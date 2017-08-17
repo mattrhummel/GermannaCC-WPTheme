@@ -15,6 +15,8 @@ require_once('library/widget-areas.php');
 require_once('library/entry-meta.php');
 // Add theme support
 require_once('library/theme-support.php');
+// Excerpts
+require_once('library/excerpts.php');
 // Custom Post Types
 require_once('library/custom-post-types.php');
 // Theme Options

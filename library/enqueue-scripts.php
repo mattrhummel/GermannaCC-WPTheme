@@ -13,7 +13,7 @@ wp_enqueue_script( 'gcc-scripts', get_template_directory_uri() . '/js/gcc-script
 if (is_page (array ('request-information', 'rif-thanks')) ) {
 wp_enqueue_script( 'form-scripts', get_template_directory_uri() . '/js/form-scripts.js', array('jquery'), '0.0.1', true );
 };
-if (is_page (array ('16776', '17285')) ) {
+if (is_page (array ('16776', '17285', '17302', '17331')) ) {
 wp_enqueue_script( 'nursing-app-scripts', get_template_directory_uri() . '/js/nursing-app-scripts.js', array('jquery'), '0.0.1', true );
 };
 }
@@ -26,7 +26,7 @@ if ( is_page(array ('request-information', 'rif-thanks')) ){
 wp_enqueue_style( 'request-info', get_stylesheet_directory_uri() . '/css/request-info.css');
 wp_enqueue_style( 'testimonial-slider', get_stylesheet_directory_uri() . '/css/testimonial-slider.css');
 };
-if ( is_page(array ('16776', '17285')) ){
+if ( is_page(array ('16776', '17285', '17302', '17331')) ){
 wp_enqueue_style( 'nursing-app', get_stylesheet_directory_uri() . '/css/nursing-app.css');
 };
 };
