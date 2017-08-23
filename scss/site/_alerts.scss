@@ -9,7 +9,7 @@
 
     border: none;
     border: 5px solid $primary-color !important;
-    background: $smoke !important;
+    background: $ghost !important;
     -webkit-box-shadow: -1px 7px 7px -3px rgba(0, 0, 0, .6);
        -moz-box-shadow: -1px 7px 7px -3px rgba(0, 0, 0, .6);
             box-shadow: 0 5px 8px -6px rgba(0, 0, 0, .2);
@@ -74,7 +74,7 @@
     color: $tuatara;
     border: none;
     border: none !important;
-    background: $smoke !important;
+    background: $ghost !important;
     a {
         font-weight: 800;
 

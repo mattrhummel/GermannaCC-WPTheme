@@ -10,7 +10,7 @@ wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
 </div>
 
 <div>                
-<h3>College Reports</h3>    
+<h3><?php echo _e('College Reports'); ?></h3>    
 <?php //get custom sidebar menu for section
 wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
     'menu' => 'Diversity Secondary Sidebar Menu', 'container' => 'true', 'menu_class' => 'submenu no-bullet' ) ); ?>

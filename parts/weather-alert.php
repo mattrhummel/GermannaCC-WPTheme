@@ -18,9 +18,9 @@ if ($content) { // if there is a special announcement or a weather alert ?>
 <div class='show-for-small-only text-center' tabindex="0">
   <div class='row'>
     
-    <a href="#" data-reveal-id="announcement" class="button default expand tiny no-margin-bottom" aria-label="weather alert">Special Announcement&hellip;</a>
-    <div id="announcement" class="reveal-modal" data-reveal aria-labelledby="announcement" aria-hidden="true" role="dialog">
-      <?php  echo "$content";  //content for the mobile special announcements  ?>
+    <a href="#" data-reveal-id="announcement" class="button default expand tiny no-margin-bottom"  aria-labelledby="announcement">Special Announcement&hellip;</a>
+    <div id="announcement" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+      <?php echo "$content";  //content for the mobile special announcements  ?>
       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
     </div>
     

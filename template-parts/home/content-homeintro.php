@@ -20,97 +20,94 @@ $extra_box1_url = get_field('extra_box1_url');
 $extra_box2_heading = get_field('extra_box2_heading');
 $extra_box2_description = get_field('extra_box2_description');
 $extra_box2_url = get_field('extra_box2_url');
+$calendar_url = get_field('calendar_url');
+$calendar_button_text = get_field('calendar_button_text');
 ?>
 <main class="home-intro" id="main">
   <div class="row">
     <div class="container">
       
-      <div class="small-12 medium-12 large-12 columns">
-        <!--home-feature-intro-->
+      <div class="small-12 columns">
+
         <div class="small-12 medium-9 columns home-features-intro ">
-          <div class="row">
-            <div class="small-12 columns no-margin">
-              <div class="small-12 medium-4 columns home-panels">
+            <div class="small-12 columns">
+              <div class="small-12 large-4 columns home-panels">
                 <ul class="feature-panels text-center">
                   <li class="apply-panel">
-                    <a href="<?php echo $apply_url; ?>">
+                    <a href="<?php echo $apply_url; //apply box links to online application?>">
                       <?php if( !empty($apply_box_image) ):  ?>
                       <div class="panel-icon">
-                        <img src="<?php echo $apply_box_image['url']; ?>"  width="<?php echo $apply_box_image['width']; ?>" height="<?php echo $apply_box_image['height']; ?>"  alt="<?php echo $apply_box_image['alt']; ?>" />
+                        <span class="fa fa-clipboard " aria-hidden="true"></span>
                       </div>
                       <?php endif; ?>
                       <div class="panel-content">
                         <span class="title"><?php echo $apply_heading; ?></span>
-                        <span class="description"><?php echo $apply_description; ?></span>
                       </div>
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="small-12  medium-4 columns home-panels">
+              <div class="small-12  large-4  columns home-panels">
                 <ul class="feature-panels text-center">
                   <li class="register-panel">
-                    <a href="<?php echo $register_url; ?>">
+                    <a href="<?php echo $register_url;  //register box links to class schedule?>">
                       <?php if( !empty($register_box_image) ):  ?>
                       <div class="panel-icon">
-                        <img src="<?php echo $register_box_image['url']; ?>"  width="<?php echo $register_box_image['width']; ?>" height="<?php echo $register_box_image['height']; ?>"  alt="<?php echo $register_box_image['alt']; ?>" />
-                      </div>
+                        <span class="fa fa-pencil" aria-hidden="true"></span>
+                                              </div>
                       <?php endif; ?>
                       <div class="panel-content">
                         <span class="title register-title"><?php echo $register_heading; ?></span>
-                        <span class="description"><?php echo $register_description; ?></span>
                       </div>
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="small-12 medium-4 columns home-panels">
+              <div class="small-12 large-4 columns home-panels">
                 <ul class="feature-panels text-center">
                   <li class="payment-panel">
-                    <a href="<?php echo $payment_url; ?>">
+                    <a href="<?php echo $payment_url; //payment box links to paying for college ?>">
                       <?php if( !empty($payment_box_image) ):  ?>
                       <div class="panel-icon">
-                        <img src="<?php echo $payment_box_image['url']; ?>"  width="<?php echo $payment_box_image['width']; ?>" height="<?php echo $payment_box_image['height']; ?>"  alt="<?php echo $payment_box_image['alt']; ?>" />
+                        <span class="fa fa-credit-card" aria-hidden="true"></span>
                       </div>
                       <?php endif; ?>
                       <div class="panel-content">
                         <span class="title"><?php echo $payment_heading; ?></span>
-                        <span class="description"><?php echo $payment_description; ?></span>
                       </div>
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="small-12 medium-12 columns panel home-news">
-                <a href="<?php echo $announcement_url; ?>" class="panel-content">
-                  <h2><?php echo $announcement_heading; ?></h2>
-                  <p><?php echo $announcement_description; ?></p>
+              <div class="small-12 columns panel home-news">
+                <a href="<?php echo $announcement_url; //middle special announcment box ?>" class="panel-content">
+                  <h3 class="title"><?php echo $announcement_heading; ?></h3>
+                  <p class="description"><?php echo $announcement_description; ?></p>
                   
                 </a>
               </div>
-              <div class="small-12 medium-12 large-6 columns panel home-extra">
-                <a href="<?php echo $extra_box1_url; ?>" class="panel-content">
-                  <h3><?php echo $extra_box1_heading; ?></h3>
-                  <p><?php echo $extra_box1_description; ?></p>
+        <div class="small-12 large-6 columns panel home-extra">
+                <a href="<?php echo $extra_box1_url; //bottom right special announcement box links to programs of study page ?>" class="panel-content">
+                  <h3 class="title"><?php echo $extra_box1_heading; ?></h3>
+                  <p class="description"><?php echo $extra_box1_description; ?></p>
                   
                 </a>
               </div>
-              <div class="small-12 medium-12 large-6 columns panel home-extra">
-                <a href="<?php echo $extra_box2_url; ?>" class="panel-content">
-                  <h3><?php echo $extra_box2_heading; ?></h3>
-                  <p><?php echo $extra_box2_description; ?></p>
+              <div class="small-12 large-6 columns panel home-extra">
+                <a href="<?php echo $extra_box2_url; //bottom right special announcement box links to programs of study page ?>" class="panel-content">
+                  <h3 class="title"><?php echo $extra_box2_heading; ?></h3>
+                  <p class="description"><?php echo $extra_box2_description; ?></p>
                   
                 </a>
               </div>
             </div>
-          </div>
         </div>
         
-        <div class="small-12 medium-3  columns events events-box">
+        <div class="small-12 medium-3 columns events events-box">
           <?php if ( is_active_sidebar( 'upcoming-events-widgets' ) ) : ?>
           <?php dynamic_sidebar( 'upcoming-events-widgets' ); ?>
           <?php endif; ?>
-          <a href="https://calendar.activedatax.com/germanna/CalendarNow.aspx?amp;more=1/1/0001&amp;display=Month&amp;type=public" class="button default text-center" target="_blank"><?php _e('View More Events', 'foundationpress') ?></a>
+          <a href="<?php echo $calendar_url; ?><" class="button default text-center" target="_blank"><?php echo $calendar_button_text; ?></a>
         </div>
        
       </div>

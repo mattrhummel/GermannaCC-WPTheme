@@ -47,7 +47,7 @@
 			/*]]>*/
 		</script>
 		<!--End Siteimprove Analytics Tracking-->
-		<div id="skip"><a href="#main">Skip To Main Content</a></div>
+		<div id="skip"><a href="<?php echo esc_html('#main', 'foundationpress') ?>"><?php _e('Skip To Main Content', 'foundationpress') ?></a></div>
 		<?php do_action( 'foundationpress_after_body' ); ?>
 		
 		<?php do_action( 'foundationpress_after_header' ); ?>

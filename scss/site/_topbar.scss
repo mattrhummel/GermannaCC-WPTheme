@@ -49,8 +49,6 @@
     position: relative;
 }
 
-
-
 /*Request Info Button*/
 
 a.callto {
@@ -91,7 +89,6 @@ a.callto span.text {
 }
 
 
-
 /*Main Navigation*/
 
 .top-bar-container {
@@ -101,7 +98,6 @@ a.callto span.text {
 }
 
 nav.top-bar>div.top-bar-section>ul.top-bar-menu.left>li {
-
     a {
         font-size: .7em;
         padding-left: 16px;
@@ -126,7 +122,6 @@ ul#menu-main-menu.top-bar-menu.left {
     color: $primary-color;
     float: left;
 }
-
 
 
 /*Main Navigation Dropdown Menu*/
@@ -161,7 +156,7 @@ ul.sub-menu.dropdown>li>a,
 }
 
 .top-bar-section.quicklinks-bar>ul>li>ul.sub-menu.dropdown>li>a {
-    height: 34px;
+    height: 32px;
     padding: 0 14px !important;
     line-height: 34px;
     font-size: .85em !important;
@@ -174,11 +169,6 @@ ul.sub-menu.dropdown>li>a,
 ul.sub-menu.dropdown>li a:hover {
     text-decoration: underline;
     color: $primary-color !important;
-}
-
-ul#menu-main-menu.top-bar-menu.left>li.menu-columns.menu-columns-left>ul.sub-menu.dropdown {
-    margin-left: -280px;
-    /*Positions the dropdown menu*/
 }
 
 
@@ -197,7 +187,6 @@ ul#menu-main-menu.top-bar-menu.left>li.menu-columns.menu-columns-left>ul.sub-men
 }
 
 
-
 /*Position the menu columns*/
 
 .menu-columns ul.sub-menu li:nth-child(odd)+li:before {
@@ -207,7 +196,6 @@ ul#menu-main-menu.top-bar-menu.left>li.menu-columns.menu-columns-left>ul.sub-men
 .menu-columns ul.sub-menu li:nth-child(even)+li:before {
     float: right;
 }
-
 
 
 /*Fix different color issue when hovering over icon*/
@@ -323,7 +311,6 @@ form#searchform>div.row.collapse>input#search {
         padding: 0;
         margin: 0;
         height: 36px !important;
-
         a {
             color: #8e8e8e !important;
             font-weight: 400;

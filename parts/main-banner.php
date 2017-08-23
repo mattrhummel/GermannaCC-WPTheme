@@ -3,10 +3,10 @@
   <div class="row">
     <div class="container">
       
-      <div class="large-4 medium-4 columns" itemprop="logo">
+      <div class="large-4 medium-12 columns" itemprop="logo">
         <a href="<?php echo get_home_url();  //get logo url ?>" class="logo" itemprop="name"><?php bloginfo('name') //get name site name ?></a>
       </div>
-      <div class="large-8 medium-8 columns">
+      <div class="large-8 medium-12 columns">
         <p class="tagline text-right" itemprop="description">
           <?php echo get_bloginfo ( 'description' ); //get tagline of website  ?>
         </p>
@@ -36,7 +36,7 @@
   <div class="top-bar-container show-for-medium-up">
     <div class="container">
       
-      <nav class="top-bar" data-topbar aria-label="<?php _e( 'Main Menu', 'textdomain' ); ?>" >
+      <nav class="top-bar" data-topbar aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" >
         <div class="top-bar-section " id="MainNavigation">
           <?php foundationpress_top_bar_l(); //displays the main navigation menu ?>
         </div>

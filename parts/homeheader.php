@@ -51,9 +51,9 @@
 			</li>
 			<?php /*keep below li or it will cause an empty li*/ endwhile; wp_reset_postdata(); ?>
 		</ul>
-		<div class="outside">
-			<span id="slider-prev" aria-hidden="true"></span>
-			<span id="slider-next" aria-hidden="true"></span>
+		<div class="outside show-for-medium-up">
+		<span id="slider-next" aria-hidden="true"></span>
+		<span id="slider-prev" aria-hidden="true"></span>
 		</div>
 	</div>
 </div>

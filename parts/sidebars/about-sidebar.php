@@ -10,14 +10,14 @@ wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
 </div>
      
 <div>    
-<h3>Governance</h3>    
+<h3><?php echo _e('Governance') ?></h3>    
 <?php //get custom sidebar menu for section
 wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
     'menu' => 'About Governance Menu', 'container' => 'false', 'menu_class' => 'submenu no-bullet' ) ); ?>
 </div>
 
 <div>  
-<h3>Facts and Figures</h3>    
+<h3><?php echo_e('Facts and Figures') ?></h3>    
 
 <?php //get custom sidebar menu for section
 wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.

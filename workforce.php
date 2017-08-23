@@ -48,7 +48,7 @@ get_header();
         <h1 class="text-center home-heading fancy"><span><?php echo $page_heading; ?></span></h1>
         <div class="small-12 medium-9 columns" id="main">
           
-          <div class="small-12 medium-4 large-4 columns home-panels">
+          <div class="small-12 large-4 columns home-panels">
             <ul class="feature-panels text-center">
               <li class="apply-panel">
                 <a href="<?php echo $box_1_url; ?>">
@@ -66,7 +66,7 @@ get_header();
               </li>
             </ul>
           </div>
-          <div class="small-12  medium-4 large-4 columns home-panels">
+          <div class="small-12  large-4 columns home-panels">
             <ul class="feature-panels text-center">
               <li class="register-panel">
                 <a href="<?php echo $box_2_url; ?>">
@@ -85,7 +85,7 @@ get_header();
               </li>
             </ul>
           </div>
-          <div class="small-12 medium-4 large-4 columns home-panels">
+          <div class="small-12 large-4 columns home-panels">
             <ul class="feature-panels text-center">
               <li class="payment-panel">
                 <a href="<?php echo $box_3_url; ?>">

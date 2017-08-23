@@ -7,16 +7,16 @@
             <div class='row'>
                 <div class='small-12 large-12 columns'>
                     <h1 role='heading'>
-                    Disability Services Blog
+                   <?php echo _e('Disability Services Blog'); ?>
                     </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="small-12 large-12 columns" role="main" itemprop="breadcrumb">
                     <ul class="breadcrumbs" role="menu">
-                        <li role="menuitem"><a href="<?php echo get_site_url(); ?>">Home</a></li>
-                        <li role="menuitem"><a href="/disability-services/">Disability Services</a></li>
-                        <li role="menuitem"> <a href="/blog/disability-services/">Disability Services Blog</a></li>
+                        <li role="menuitem"><a href="<?php echo get_site_url(); ?>"><?php echo _e('Home'); ?></a></li>
+                        <li role="menuitem"><a href="<?php echo esc_html('/disability-services/'); ?>"><?php echo _e('Disability Services'); ?></a></li>
+                        <li role="menuitem"> <a href="<?php echo esc_html('/blog/disability-services/'); ?>"><?php echo _e('Disability Services Blog'); ?></a></li>
                         <?php
                         // if there is a parent, display the link to go back to parent page
                         $parent_title = get_the_title( $post->post_parent );
@@ -37,13 +37,13 @@
             ?>
             <div class="row without-image">
                 <div class="small-12 large-12 columns'">
-                    <h1>Disability Services Blog</h1>
+                    <h1><?php echo _e('Disability Services Blog'); ?></h1>
                     <div class="row">
                         <div class="small-12 large-12 columns">
                             <ul class="breadcrumbs" role="menu">
-                                <li role="menuitem"><a href="<?php echo get_site_url( ); ?>">Home</a></li>
-                                <li role="menuitem"><a href="/disability-services/">Disability Services</a></li>
-                                <li role="menuitem"><a href="/blog/disability-services/">Disability Services Blog</a></li>
+                                <li role="menuitem"><a href="<?php echo get_site_url( ); ?>"><?php echo _e('Home'); ?></a></li>
+                                <li role="menuitem"><a href="<?php echo esc_html('/disability-services/'); ?>"><?php echo _e('Disability Services'); ?></a></li>
+                                <li role="menuitem"><a href="<?php echo esc_html('/blog/disability-services/'); ?>"><?php echo _e('Disability Services Blog');  ?></a></li>
                                 <?php
                                 // if there is a parent, display the link to go back to parent page
                                 $parent_title = get_the_title( $post->post_parent );

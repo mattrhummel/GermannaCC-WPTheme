@@ -10,30 +10,31 @@ $explore_heading = get_field('explore_heading'); ?>
         //Begin slider custom post type loop
         $loop = new WP_Query(array('post_type' =>'explore-slider',
         'post_status' => 'publish',
-        'posts_per_page' => 24,
+        'posts_per_page' => -1,
         'caller_get_posts' => 1
         ));
         ?>
         
         <?php while ( $loop->have_posts() ) : $loop->the_post();
+
+        $department_blurb = get_field('department_blurb');
         
         $my_meta = get_post_meta( $post->ID, 'custom_link', true ); /*Gets custom link for each explore germanna image post */
         if( $my_meta && '' != $my_meta ) : ?>
-        <div class="small-12 medium-6 large-6 columns explore" id="post-<?php the_ID(); ?>">
+        <div class="small-12 medium-6 large-4 columns explore" id="post-<?php the_ID(); ?>">
           <div class="small-12 columns explore-container">
             
-            <div class="small-12 medium-12 large-4 columns explore-image">
+            <div class="small-12 columns explore-image" aria-hidden="true" aria-label="section image">
               <?php if ( has_post_thumbnail() ) : /*Grabs the explore germanna post featured images*/
-              the_post_thumbnail('post_thumbnail', ['class' => 'img-responsive']); /*Displays post thumbnail */ ?>
+              the_post_thumbnail(); /*Displays post thumbnail */ ?>
             </div>
-            <div class="small-12 medium-12 large-8 columns explore-content">
-              <?php the_title('<h3>', '</h3>');
-               the_excerpt('<p>','</p>');
-               ?>
-
-              <a role="button" aria-label="<?php the_title(); echo _e('s Website') ?>" href="<?php echo $my_meta ?>" class="button tiny right"><?php echo _e('Learn More') ?></a>
+            <div class="small-12 columns explore-content">
+             <h3><a href="<?php echo $my_meta; ?>" aria-label="<?php the_title(); echo _e('Website') ?>" role="link"><?php the_title(); ?></a></h3>
+              
+              <p><?php echo $department_blurb; ?></p>
               
             </div>
+            <a role="button" aria-label="<?php the_title(); echo _e('s Website') ?>" href="<?php echo $my_meta ?>" class="button tiny"><?php echo _e('Learn More') ?></a>
             
           </div>
         </div>
@@ -45,7 +46,5 @@ $explore_heading = get_field('explore_heading'); ?>
       </div>
     </div>
   </div>
-</div>
 </section>
-<?php wp_reset_postdata();
-?>
+<?php wp_reset_postdata(); ?>

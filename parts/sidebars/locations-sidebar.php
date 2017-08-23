@@ -1,7 +1,7 @@
 <aside id="sidebar" class="small-12 medium-4 medium-pull-8 large-4 columns large-pull-8" role="complementary"> 
 <div>        
 <?php do_action( 'foundationpress_before_sidebar' ); ?>        
-<h3>Locations</h3>    
+<h3><?php echo _e('Germanna Locations'); ?></h3>    
 <?php //get custom sidebar menu for section
 wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
     'menu' => 'Locations Menu', 'container' => 'true', 'menu_class' => 'submenu no-bullet' ) ); ?>

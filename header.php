@@ -31,12 +31,12 @@
 		</script>
 		
 		<div id="outdated" aria-hidden="true">
-			<p class="heading">Your Browser Is Out Of Date</p>
-			<p>For a better and more secure user experience Germanna.EDU only supports current browser versions</p>
-			<p><a id="btnUpdateBrowser" href="http://outdatedbrowser.com/fr">Find A Browser</a></p>
+			<p class="heading"><?php echo _e('Your Browser Is Out Of Date', 'foundationpress') ?></p>
+			<p><?php echo _e('For a better and more secure user experience Germanna.EDU only supports current browser versions', 'foundationpress'); ?></p>
+			<p><a id="btnUpdateBrowser" href="<?php echo esc_html( 'http://outdatedbrowser.com/fr' ); ?>"><?php echo _e('Find A Browser', 'foundationpress'); ?></a></p>
 			<p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Fermer">&times;</a></p>
 		</div>
-		<div id="skip"><a href="#main" class="sr-only">Skip To Main Content</a></div>
+		<div id="skip"><a href="<?php echo esc_html('#main'); ?>" class="sr-only"><?php echo _e('Skip To Main Content'); ?></a></div>
 		<?php do_action( 'foundationpress_after_body' ); ?>
 		<?php get_template_part( 'parts/top-bar' );  /*gets main navigation*/
 		get_template_part( 'parts/branding' );  /*gets branding header*/

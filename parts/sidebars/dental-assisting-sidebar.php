@@ -3,7 +3,7 @@
 
  <div>        
 <?php do_action( 'foundationpress_before_sidebar' ); ?>        
-<h3>Dental Assisting Program Information</h3>    
+<h3><?php echo _e('Dental Assisting Program Information'); ?></h3>    
 <?php //get custom sidebar menu for section
 wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
     'menu' => 'DA Important Links Menu', 'container' => 'true', 'menu_class' => 'submenu no-bullet' ) ); ?>

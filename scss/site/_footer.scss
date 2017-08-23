@@ -4,10 +4,16 @@
     font-size: 1.2rem;
 
     background-color: $primary-color;
+    text-align: center;
     &.bottom-footer {
         padding: 1rem 0;
 
         background-color: $jet;
+    }
+    h3.tagline {
+        line-height: 32px;
+        font-size: 1em !important;
+        text-transform: none;
     }
     h3,
     h4 {
@@ -18,15 +24,11 @@
             display: block;
             padding: 0 0 20px 0;
 
-            font: 800 1.8rem;
+            font: 800 1.2em !important;
         }
     }
     h4 {
         padding: 5px 0 0 0;
-
-        font-size: 1.2rem;
-        font-weight: 800 !important;
-
         color: $white !important;
     }
     p {
@@ -44,7 +46,7 @@
     }
     .links {
         padding: 0;
-        margin: 0 0 20px 0;
+        margin: 0;
 
         list-style: none;
 
@@ -58,9 +60,9 @@
         padding: 0;
         margin: 0;
 
-        font: 800 .8em $header-font-family;
+        font: 400 .8em $header-font-family;
         list-style: none;
-
+       letter-spacing: .8px;
         transition: all .2s ease-in-out;
         text-align: left;
 

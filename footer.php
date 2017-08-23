@@ -15,9 +15,9 @@
     )
     ?>
     <div class="row" id="FooterImportantLinks">
-        <div class="small-12 medium-8 large-8 columns">
-          <h3><?php bloginfo( 'description' ); ?></h3>
-          <div class=" small-12 medium-6 large-6 columns no-margin-left">
+        <div class="small-12 medium-8 columns">
+          <h3 class="tagline"><?php bloginfo( 'description' ); ?></h3>
+          <div class=" small-12 medium-4 large-6 columns no-margin-left">
             <?php wp_nav_menu( array( 'menu' => 'Footer Col1 Menu', 'container' => 'true', 'menu_class' => 'links' ) ); ?>
             <?php dynamic_sidebar( 'footer-col1-widgets' ); ?>
           </div>
@@ -26,9 +26,9 @@
             <?php dynamic_sidebar( 'footer-col2-widgets' ); ?>
           </div>
         </div>
-        <div class="small-12 medium-4 large-4 columns">
+        <div class="small-12 medium-4 columns">
          
-          <h3>
+          <h3 class="contact-number">
           <?php if( get_field('before_number_text', 'option') ): //if the text before the number is filled out dispaly the text else it will hide ?>
           <?php the_field('before_number_text', 'option');  ?>
           <?php endif; ?>
@@ -39,38 +39,37 @@
           
           <ul class="social-icons text-center" role="menu">
             <?php if( get_field('facebook_url', 'option') ): ?>
-            <li role="menuitem"><a href="<?php the_field('facebook_url', 'option'); ?>" title="facebook" target="_blank" aria-hidden="true"><span class="fa fa-facebook"></span ></a>
-            </li>
+            <li role="menuitem"><a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank" aria-hidden="true"><span class="fa fa-facebook"></span ></a></li>
             <?php endif; ?>
 
             <?php if( get_field('youtube_url', 'option') ): ?>
-            <li role="menuitem"><a href="<?php the_field('youtube_url', 'option'); ?>" title="youtube" target="_blank"  aria-hidden="true"><span  class="fa fa-youtube"></span ></a>
+            <li role="menuitem"><a href="<?php the_field('youtube_url', 'option'); ?>" target="_blank"  aria-hidden="true"><span  class="fa fa-youtube"></span ></a>
             </li>
             <?php endif; ?>
 
             <?php if( get_field('twitter_url', 'option') ): ?>
-            <li role="menuitem"><a href="<?php the_field('twitter_url', 'option'); ?>" title="twitter" target="_blank"  aria-hidden="true"><span  class="fa fa-twitter"></span></a>
+            <li role="menuitem"><a href="<?php the_field('twitter_url', 'option'); ?>" target="_blank"  aria-hidden="true"><span  class="fa fa-twitter"></span></a>
             </li>
             <?php endif; ?>
 
             <?php if( get_field('instagram_url', 'option') ): ?>
-            <li role="menuitem"><a href="<?php the_field('instagram_url', 'option'); ?>" title="instagram" target="_blank"  aria-hidden="true"><span  class="fa fa-instagram"></span></a>
+            <li role="menuitem"><a href="<?php the_field('instagram_url', 'option'); ?>" target="_blank"  aria-hidden="true"><span  class="fa fa-instagram"></span></a>
             </li>
             <?php endif; ?>
 
             <?php if( get_field('flickr_url', 'option') ): ?>
             <li role="menuitem"><a href= "<?php the_field('flickr_url', 'option'); ?>"
-            title="flickr" target="_blank"><span  class="fa fa-flickr"></span ></a>
+            target="_blank"><span  class="fa fa-flickr"></span ></a>
             </li>
             <?php endif; ?>
 
             <?php if( get_field('chat_url', 'option') ): ?>
-            <li role="menuitem"><a href="<?php the_field('chat_url', 'option'); ?>" title="online chat" aria-hidden="true"><span  class="fa fa-headphones"></span></a>
+            <li role="menuitem"><a href="<?php the_field('chat_url', 'option'); ?>" aria-hidden="true"><span  class="fa fa-headphones"></span></a>
             </li>
             <?php endif; ?>
 
             <?php if( get_field('rss_url', 'option') ): ?>
-            <li role="menuitem"><a href="<?php the_field('rss_url', 'option'); ?>" title="rss feed" target="_blank" aria-hidden="true"><span  class="fa fa-rss"></span></a>
+            <li role="menuitem"><a href="<?php the_field('rss_url', 'option'); ?>" target="_blank" aria-hidden="true"><span  class="fa fa-rss"></span></a>
             </li>
           <?php endif; ?>
           </ul>

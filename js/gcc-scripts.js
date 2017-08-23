@@ -24,8 +24,8 @@ jQuery(document).ready(function($) {
         randomStart: false,
         nextSelector: '#slider-next',
         prevSelector: '#slider-prev',
-        nextText: '<i class="fa fa-chevron-left">',
-        prevText: '<i class="fa fa-chevron-right">',
+        nextText: '<span class="fa fa-angle-left">',
+        prevText: '<span class="fa fa-angle-right">',
         controls: true,
         pagerType: 'full',
         pager: false,
@@ -37,30 +37,14 @@ jQuery(document).ready(function($) {
             $(".slider-container").css("visibility", "visible");
         }
     });
-    $('.bxslider2').bxSlider({
-        maxSlides: 6,
-        startSlide: 0,
-        randomStart: false,
-        auto: false,
-        autoControls: false,
-        nextSelector: '#slider-next2',
-        prevSelector: '#slider-prev2',
-        nextText: '<i class="fa fa-chevron-right">',
-        prevText: '<i class="fa fa-chevron-left">',
-        controls: true,
-        speed: 1000,
-        onSliderLoad: function() {
-            $(".explore-slider-container").css("visibility", "visible");
-        }
-    });
     $('.bxslider3').bxSlider({
         slideMargin: 8,
         minSlides: 2,
         maxSlides: 3,
         nextSelector: '#slider-next3',
         prevSelector: '#slider-prev3',
-        nextText: '<i class="fa fa-chevron-right">',
-        prevText: '<i class="fa fa-chevron-left">',
+        nextText: '<span class="fa fa-angle-left">',
+        prevText: '<span class="fa fa-angle-right">',
         controls: true,
         onSliderLoad: function() {
             $(".highlights-slider-container").css("visibility", "visible");

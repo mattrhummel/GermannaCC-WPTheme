@@ -160,7 +160,7 @@ wp_nav_menu(array(
 'link_after' => '',                             // after each link text
 'depth' => 5,                                   // limit the depth of the nav
 'fallback_cb' => false,                         // fallback function (see below)
- 'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar">%3$s</ul>',
+ 'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar" aria-label="Main Menu">%3$s</ul>',
 'walker' => new Foundationpress_Top_Bar_Walker()
 ));
 }
@@ -182,7 +182,7 @@ wp_nav_menu(array(
 'link_after' => '',                             // after each link text
 'depth' => 5,                                   // limit the depth of the nav
 'fallback_cb' => false,                         // fallback function (see below)
- 'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar">%3$s</ul>',
+ 'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar" aria-label="Quicklinks Menu">%3$s</ul>',
 'walker' => new Foundationpress_Top_Bar_Walker_Quicklinks()
 ));
 }
@@ -204,6 +204,7 @@ wp_nav_menu(array(
 'link_after' => '',                             // after each link text
 'depth' => 5,                                   // limit the depth of the nav
 'fallback_cb' => false,                         // fallback function (see below)
+'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar" aria-label="Mobile Menu">%3$s</ul>',
 'walker' => new Foundationpress_Offcanvas_Walker()
 ));
 }

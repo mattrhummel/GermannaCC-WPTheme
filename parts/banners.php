@@ -38,7 +38,7 @@
                 
             </div>
 
-            <div class='subpage-hero'>
+            <div class='subpage-hero show-for-medium-up'>
                 <div id='bg'>
                     <?php the_post_thumbnail( array() );  ?>
                 </div>
