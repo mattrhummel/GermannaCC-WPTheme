@@ -17,7 +17,7 @@ wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
 </div>
 
 <div>  
-<h3><?php echo_e('Facts and Figures') ?></h3>    
+<h3><?php echo _e('Facts and Figures') ?></h3>    
 
 <?php //get custom sidebar menu for section
 wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.

@@ -153,7 +153,6 @@ get_header();
             </ul>
           </div>
           <div class="sidebar-newsletter">
-            <h3>Sign up for our newsletter!</h3>
             
             <?php if ( is_active_sidebar( 'upcoming-workforceevents-widgets' ) ) : ?>
             <?php dynamic_sidebar( 'upcoming-workforceevents-widgets' ); ?>

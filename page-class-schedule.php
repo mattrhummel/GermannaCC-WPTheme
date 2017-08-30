@@ -24,7 +24,12 @@ get_header(); ?>
 				}
 				?>
 			</div>
-			<?php get_template_part( 'parts/content' ); ?>
+		 
+<script>$("#classSchedule").load("http://applications.germanna.edu/class-schedule/index.asp #classSchedule > *");</script>
+
+<div id="classSchedule"></div>
+
+
 			<?php get_template_part( 'parts/sidebars/class-schedule-sidebar' ); ?>
 		</div>
 	</div>

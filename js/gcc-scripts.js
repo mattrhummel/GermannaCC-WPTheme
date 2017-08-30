@@ -50,6 +50,7 @@ jQuery(document).ready(function($) {
             $(".highlights-slider-container").css("visibility", "visible");
         }
     });
+    });
     $(window).load(function() {
         var theWindow = $(window),
             $bg = $("#highlights-background"),
@@ -68,7 +69,6 @@ jQuery(document).ready(function($) {
         }
         theWindow.resize(resizeBg).trigger("resize");
     });
-});
 $(function() {
     $(document).on('scroll', function() {
         if ($(window).scrollTop() > 600) {

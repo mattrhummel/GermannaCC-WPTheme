@@ -19,15 +19,6 @@ register_sidebar(array(
 	'before_title' => '<h4>',
 	'after_title' => '</h4>',
 	));
-register_sidebar(array(//footer widgets
-	'id' => 'footer-widgets',
-	'name' => __( 'Footer widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-	));
 register_sidebar(array(
 	'id' => 'footer-col1-widgets',
 	'name' => __( 'Footer Col1 widgets', 'foundationpress' ),
@@ -49,15 +40,6 @@ register_sidebar(array(
 register_sidebar(array(
 	'id' => 'footer-col3-widgets',
 	'name' => __( 'Footer Col3 widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-	'before_widget' => '',
-	'after_widget' => '',
-	'before_title' => '',
-	'after_title' => '',
-	));
-register_sidebar(array(
-	'id' => 'footer-callto-widgets',
-	'name' => __( 'Footer Callto widgets', 'foundationpress' ),
 	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
 	'before_widget' => '',
 	'after_widget' => '',
@@ -406,15 +388,6 @@ register_sidebar(array(
 	'after_title' => '</h4>',
 	));
 register_sidebar(array(
-	'id' => 'early-college-widgets',
-	'name' => __( 'Early College Sidebar widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-	));
-register_sidebar(array(
 'id' => 'edfoundation-widgets',
 'name' => __( 'Educational Foundation Sidebar widgets', 'foundationpress' ),
 'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
@@ -423,15 +396,6 @@ register_sidebar(array(
 	'before_title' => '<h4>',
 	'after_title' => '</h4>',
 ));
-register_sidebar(array(
-	'id' => 'el-widgets',
-	'name' => __( 'EL widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-		'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-	));
 register_sidebar(array(
 	'id' => 'engineering-technologies-widgets',
 	'name' => __( 'Engineering Technology Sidebar widgets', 'foundationpress' ),
@@ -503,15 +467,6 @@ register_sidebar(array(
 	'before_title' => '<h4>',
 	'after_title' => '</h4>',
 	));
-register_sidebar(array(
-'id' => 'giving-widgets',
-'name' => __( 'Giving Sidebar widgets', 'foundationpress' ),
-'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-));
 register_sidebar(array(
 	'id' => 'great-expectations-widgets',
 	'name' => __( 'Great Expectation Sidebar widgets', 'foundationpress' ),
@@ -666,24 +621,6 @@ register_sidebar(array(
 	'after_title' => '</h4>',
 	));
 register_sidebar(array(
-	'id' => 'motorcycle-widgets',
-	'name' => __( 'Motorcycle Sidebar widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-	));
-register_sidebar(array(
-	'id' => 'mygcc-widgets',
-	'name' => __( 'myGCC Sidebar widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-	));
-register_sidebar(array(
 	'id' => 'nursing-health-widgets',
 	'name' => __( 'Nursing Health Sidebar widgets', 'foundationpress' ),
 	'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
@@ -728,15 +665,6 @@ register_sidebar(array(
 	'before_title' => '<h4>',
 	'after_title' => '</h4>',
 	));
-register_sidebar(array(
-'id' => 'ontime-widgets',
-'name' => __( 'Ontime Sidebar widgets', 'foundationpress' ),
-'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-));
 register_sidebar(array(
 	'id' => 'payingforcollege-widgets',
 	'name' => __( 'Paying For College Sidebar widgets', 'foundationpress' ),
@@ -963,15 +891,6 @@ register_sidebar(array(
 'after_title' => '</h4>',
 	));
 register_sidebar(array(
-	'id' => 'veterans-mentor-widgets',
-	'name' => __( 'Veterans Mentor Sidebar widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-	));
-register_sidebar(array(
 	'id' => 'vp-academics-widgets',
 	'name' => __( 'VP Academics Sidebar widgets', 'foundationpress' ),
 	'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
@@ -1008,24 +927,6 @@ register_sidebar(array(//FEATURED AREA WIDGETS
 	'after_title' => '</h4>',
 	));
 register_sidebar(array(
-	'id' => 'intro-widget',
-	'name' => __( 'Home Intro', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-	'before_widget' => '',
-	'after_widget' => '',
-	'before_title' => '<h1 class="home-widget-title">',
-	'after_title' => '</h1>',
-	));
-register_sidebar(array(
-	'id' => 'workforce-intro-widget',
-	'name' => __( 'Workforce Intro', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-	'before_widget' => '',
-	'after_widget' => '',
-	'before_title' => '<h2 class="home-widget-title">',
-	'after_title' => '</h2>',
-	));
-register_sidebar(array(
 	'id' => 'upcoming-events-widgets',
 	'name' => __( 'Upcoming Events widgets', 'foundationpress' ),
 	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
@@ -1044,15 +945,6 @@ register_sidebar(array(
 	'after_title' => '</h2>',
 	));
 register_sidebar(array(
-	'id' => 'upcoming-classes-widgets',
-	'name' => __( 'Upcoming Classes widgets', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-	'before_widget' => '<aside id="sidebar">',
-	'after_widget' => '</aside>',
-	'before_title' => '<h2>',
-	'after_title' => '</h2>',
-	));
-register_sidebar(array(
 	'id' => 'quicklinks-widgets',
 	'name' => __( 'Quicklinks widgets', 'foundationpress' ),
 	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
@@ -1060,15 +952,6 @@ register_sidebar(array(
 	'after_widget' => '',
 	'before_title' => '',
 	'after_title' => '',
-	));
-register_sidebar(array(
-	'id' => 'home-callto-widget',
-	'name' => __( 'Home CallTo', 'foundationpress' ),
-	'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
-	'before_widget' => '',
-	'after_widget' => '',
-	'before_title' => '<h2 class="home-callto-title text-center">',
-	'after_title' => '</h2>',
 	));
 }
 add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );

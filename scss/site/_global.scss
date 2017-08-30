@@ -214,7 +214,11 @@ h2 {
     width: auto;
     height: auto;
 }
-
+/*Accessibility Icon*/
+.accessability_container button.aicon_link {
+    background-color: $primary-color !important;
+    color: #000000 !important;
+} 
 
 /*Back to top styling*/
 
