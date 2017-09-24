@@ -1,6 +1,7 @@
 <?php
 function foundationpress_scripts() {
-if  ( ! is_admin() ) //hides admin styles if not logged in
+//hides admin styles if not logged in
+if ( ! is_admin() )
 {
 //Load CSS Styles in Min Format
 wp_enqueue_style( 'foundation', get_stylesheet_directory_uri() . '/css/foundation.min.css');
@@ -12,6 +13,7 @@ wp_deregister_script( 'jquery' );
 wp_deregister_script( 'jquery-spinner' );
 wp_deregister_script( 'custom_script' );
 wp_deregister_script( 'contact-form-7' );
+
 //Load Needed Scripts in Min format
 wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2.8.3', true );
 wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', array(), '1.8.2', false);
@@ -49,14 +51,4 @@ wp_enqueue_style( 'nursing-app', get_stylesheet_directory_uri() . '/css/nursing-
 };
 };
 add_action( 'get_footer', 'prefix_add_footer_styles' );
-//Defers Js files until rest of page loads for quicker page load
-add_filter( 'clean_url', function( $url )
-{
-    if ( FALSE === strpos( $url, '.js' ) )
-    { // not our file
-        return $url;
-    }
-    // Must be a ', not "!
-    return "$url' defer='defer";
-}, 11, 1 );
 ?>

@@ -11,7 +11,7 @@ get_header(); ?>
 	
 <div class="small-12 large-12 columns">
 <?php // Gets the alert custom post type id for each sub page needing special announcement
-$post_id = 5485;
+$post_id = 5475;
 	$queried_post = get_post($post_id);
 							$content = $queried_post->post_content;
 							$content = apply_filters('the_content', $content);

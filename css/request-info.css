@@ -20,12 +20,15 @@ body {
     padding: 20px 0;
     background: url(../img/rfi-header.jpeg) no-repeat center center;
     position:  relative;
+    min-width: 100%;
+
  
 }
+
 .callout > .row > .callout-content {
   position: absolute;
   bottom: 10px;
-  width: 88%;
+  width: 100%;
   overflow: hidden;
 
 }

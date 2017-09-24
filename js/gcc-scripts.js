@@ -11,46 +11,50 @@ jQuery( function ( $ ) {
     $( ev.currentTarget ).attr( 'aria-expanded', false );
   } );
 } );
-jQuery(document).ready(function($) {
-    $('.bxslider1').bxSlider({
-        auto: false,
-        autoStart: false,
-        autodelay: 0,
-        infiniteLoop: true,
-        mode: 'horizontal',
-        easeing: 'ease-in-out',
-        slideMargin: 0,
-        startSlide: 0,
-        randomStart: false,
-        nextSelector: '#slider-next',
-        prevSelector: '#slider-prev',
-        nextText: '<span class="fa fa-angle-left">',
-        prevText: '<span class="fa fa-angle-right">',
-        controls: true,
-        pagerType: 'full',
-        pager: false,
-        speed: 1000,
-        pause: 90000,
-        adaptiveHeight: 'true',
-        preloadImages: 'all',
-        onSliderLoad: function() {
-            $(".slider-container").css("visibility", "visible");
-        }
-    });
-    $('.bxslider3').bxSlider({
-        slideMargin: 8,
-        minSlides: 2,
-        maxSlides: 3,
-        nextSelector: '#slider-next3',
-        prevSelector: '#slider-prev3',
-        nextText: '<span class="fa fa-angle-left">',
-        prevText: '<span class="fa fa-angle-right">',
-        controls: true,
-        onSliderLoad: function() {
-            $(".highlights-slider-container").css("visibility", "visible");
-        }
-    });
-    });
+jQuery( document ).ready(function( $ ) {
+ 
+ $('.bxslider1').bxSlider({
+     autoStart: true,
+     autodelay: 0,
+     infiniteLoop: true,
+     slideMargin: 0,
+     startSlide: 0,
+     randomStart: false,
+     nextSelector: '#slider-next',
+     prevSelector: '#slider-prev',
+     nextText: '<span class="fa fa-angle-right">',
+     prevText: '<span class="fa fa-angle-left">',
+     controls: true,
+     pagerType:'full',
+     pager: false,
+     speed: 1000,
+     pause: 16000,
+     adaptiveHeight: 'true',
+     preloadImages: 'all',
+     onSliderLoad: function() {
+         $(".slider-container").css("visibility", "visible");
+    }
+});
+  
+$('.bxslider3').bxSlider({
+    slideMargin: 8,
+    minSlides: 3,
+    maxSlides: 3,
+    nextSelector: '#slider-next3',
+    prevSelector: '#slider-prev3',
+    nextText: '<span class="fa fa-angle-right">',
+    prevText: '<span class="fa fa-angle-left">',
+    controls: true,
+    onSliderLoad: function() {
+         $(".highlights-slider-container").css("visibility", "visible");
+         }
+
+});
+
+ var removeLinkTitles = 1;
+
+});
+
     $(window).load(function() {
         var theWindow = $(window),
             $bg = $("#highlights-background"),
@@ -102,7 +106,7 @@ function addLoadEvent(func) {
     }
 }
 //call plugin function after DOM ready
-addLoadEvent(function(){
+addLoadEvent(function() {
     outdatedBrowser({
         bgColor: '#A20B35',
         color: '#ffffff',

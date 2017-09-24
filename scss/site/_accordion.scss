@@ -1,8 +1,6 @@
 .accordion.yourcustomclass {
     margin-bottom: 20px;
 }
-
-
 .accordion.yourcustomclass > dd > a,
 .accordion.yourcustomclass > li > a {
     position: relative;
@@ -10,8 +8,7 @@
     padding: 14px 0 10px 10px;
     margin: 0 0 4px 0 !important;
 
-    font-weight: 400;
-
+    font-weight: 600;
     text-decoration: none;
 
     color: $secondary-color;
@@ -59,36 +56,53 @@
 }
 
 .accordion.yourcustomclass > dd.active > .content {
-    padding: 0 20px;
+    padding: 20px;
 
-    background-color: #fff;
 }
 
 .accordion.yourcustomclass > dd.active > .content.active {
-    padding: 0;
+    padding: 20px;
+
+    h2, h3 {
+        padding-bottom: 4px;
+    }
+
+    h2 {
+        font-size: 1.4em !important;
+    }
+
+    h3 {
+        font-size: 1.2em !important;
+    }
     p {
         display: block;
 
         font-size: 1em;
     }
+
+    a:hover {
+        background-color: #CC3333;
+        color: #ffffff;
+    }
+
+   ul {
+    padding-left: 2px;
+   }
 }
 
 .accordion.yourcustomclass > dd > .content > div.row {
-    padding: 20px;
+    padding: 0 10px;
+    margin-top: 0;
+}
+.accordion > dd.active > div.content.active > div.row > div.columns.large-6.small-12.medium-6 {
+    padding: 0 0 0 5px;
 }
 
-.accordion.yourcustomclass > dd.active > .content.active > table > tbody > tr > td > a .accordion.yourcustomclass > dd.active > .content.active > p > a {
-    font-weight: 800;
-
-    background: none;
-}
-
-.accordion.yourcustomclass > dd.active > div.content.active > table > tbody > tr > td > p > a {
-    font-weight: 800;
+div.tabs-content > div.content.active > dl.accordion > dd.active > div.content.active {
+    background-color: transparent;
 }
 
 table.workshop-table > tbody > tr > td > a {
-    font-weight: 800;
 
     background: none !important;
     background-color: none !important;

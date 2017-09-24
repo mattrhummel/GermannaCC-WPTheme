@@ -4,6 +4,7 @@
 Template Name: Workforce
 */
 get_header(); ?>
+<?php include_once("wfanalyticstracking.php") ?>
 <?php get_template_part( 'parts/banners' ); ?>
 <div class="row">
 	<div class="container">

@@ -19,10 +19,9 @@
         }
         li a {
             display: block;
-            padding: 10px 0 10px 20px;
+            padding: 10px 0 10px 10px;
             margin-bottom: 1px;
-
-            font-weight: bold;
+            font-weight: 800;
 
             color: #333;
             background: $smoke;
@@ -266,13 +265,6 @@ aside#sidebar > .sidebar-icons > ul.intro-icons {
 
 .intro-icons li a span:hover {
     color: $secondary-color;
-}
-
-.fa-facebook,
-.fa-linkedin,
-.fa-twitter,
-.google-plus {
-    background: #fff !important;
 }
 
 .sidebar-newsletter > div.textwidget {

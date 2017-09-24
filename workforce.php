@@ -38,15 +38,16 @@ $highlights_button_text = get_field('highlights_button_text');
 $highlights_button_url = get_field('highlights_button_url');
 get_header();
 ?>
+<?php include_once("wfanalyticstracking.php") ?>
 <?php do_action( 'foundationpress_after_header' ); ?>
 <div class="home-intro">
   <div class="row">
     <div class="container">
       
       <main  id="#main" class="small-12 medium-12 large-12 columns" role="main">
-        
         <h1 class="text-center home-heading fancy"><span><?php echo $page_heading; ?></span></h1>
-        <div class="small-12 medium-9 columns" id="main">
+        
+        <div class="small-12 medium-9 columns">
           
           <div class="small-12 large-4 columns home-panels">
             <ul class="feature-panels text-center">
@@ -174,52 +175,58 @@ get_header();
   <div class="highlights">
 
     <div class="row">
-    <div class="container">
+      <div class="container">
+        <h2 class="text-center"><?php echo $workforce_highlights_heading; ?></h2>
+        <!--Get Germanna Highlights Excerpts-->
+        <div class="highlights-slider-container">
+          
+          
+          <ul class="bxslider3 highlights-content">
+            <?php
+            $loop = new WP_Query(array(
+            'post_type' => 'workforce-highlights',
+            'post_status' => 'publish',
+            'posts_per_page' => 12,
+            'orderby' => '',
+            'caller_get_posts' => 1
+            ));
+            ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+            <li class="workforce-slides">
+              <div class="content">
+                <div class="wf-highlights-slides" ?>
+                  <h3>
+                  <?php the_title(); /*Get Excerpt Title*/ ?>
+                  </h3>
+                  <?php if ( has_post_thumbnail() ) : ?>
+                  <?php the_post_thumbnail('workforce-highlights'); ?>
+                  <?php endif; ?>
+                  <?php the_content(); /*Display the excerpt*/ ?>
+                </div>
+              </div>
+            </li>
+            <?php endwhile; wp_reset_postdata(); ?>
+            <!--End the loop-->
+          </ul>
 
-    <h2 class="text-center"><?php echo $workforce_highlights_heading; ?></h2>
-    <!--Get Germanna Highlights Excerpts-->
-    <div class="highlights-slider-container">
-      
-      
-      <ul class="bxslider3 highlights-content">
-        <?php
-        $loop = new WP_Query(array(
-        'post_type' => 'workforce-highlights',
-        'post_status' => 'publish',
-        'posts_per_page' => 12,
-        'orderby' => '',
-        'caller_get_posts' => 1
-        ));
-        ?>
-        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <li class="workforce-slides">
-          <div class="content">
-            <div class="wf-highlights-slides" ?>
-              <h3>
-              <?php the_title(); /*Get Excerpt Title*/ ?>
-              </h3>
-              <?php if ( has_post_thumbnail() ) : ?>
-              <?php the_post_thumbnail('workforce-highlights'); ?>
-              <?php endif; ?>
-              <?php the_content(); /*Display the excerpt*/ ?>
-            </div>
+
+           <div class="outside show-for-medium-up">
+            <span id="slider-next3" aria-hidden="true"></span>
+            <span id="slider-prev3" aria-hidden="true"></span>
           </div>
-        </li>
-        <?php endwhile; wp_reset_postdata(); ?>
-        <!--End the loop-->
-      </ul>
-      <div class="outside">
-        <span id="slider-prev3"></span>
-        <span id="slider-next3"></span>
-      </div>
-      <div class="text-center">
-        <?php if( !empty($highlights_button_text) ): ?>
-        <a class="button read-more" href="<?php echo $highlights_button_url; ?>"><?php echo $highlights_button_text; ?></a>
-        <?php endif; ?>
+
+          
+          <div class="text-center">
+            <?php if( !empty($highlights_button_text) ): ?>
+            <a class="button read-more" href="<?php echo $highlights_button_url; ?>"><?php echo $highlights_button_text; ?></a>
+            <?php endif; ?>
+          </div>
+          
+
+        </div>
       </div>
     </div>
-    </div>
-    </div>
+
   </div>
 </div>
 <!--<div class='calltos' role='main'>

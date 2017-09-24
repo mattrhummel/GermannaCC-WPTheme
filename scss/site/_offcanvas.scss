@@ -7,18 +7,18 @@ padding: 0;
 .right-off-canvas-toggle {
 background: none;
 background: $white;
-.open {
+ span.fa.fa-align-right {
 color: $primary-color;
-font-size: 1.6em;
+font-size: 2em;
 clear: both;
 display: block;
 float: right;
 padding: 0;
-margin: 0 10px 0 0;
+margin: 4px 10px 0 0;
 }
-.close {
+span.fa.fa-times {
 color: #ffffff;
-font-size: 1.6em;
+font-size: 2em;
 clear: both;
 display: block;
 float: right;
@@ -27,6 +27,8 @@ margin: 0 10px 0 0;
 background: $primary-color;
 }
 }
+
+
 .right-off-canvas-menu {
 padding: 0;
 background: $primary-color;
@@ -54,23 +56,25 @@ margin: 0 0 20px 0;
 .mobile-callto {
 padding: 0;
 margin: 0;
-li {
 text-align: center;
+font: 100 1em $header-font-family;
+color: $white;
+
+li {
+
 padding: 0;
 margin: 0;
 list-style: none;
 a {
 padding: 0 20px;
-color: $white;
 margin: 0;
 display: block;
-font: 100 1em $header-font-family;
 }
 }
 }
-
 .mobile-main-menu {
 margin: 0;
+text-align: center;
 ul {
 li {
 a {
@@ -81,46 +85,4 @@ border-top: 1px solid $white;
 }
 }
 }
-}
-
-.mobile-quicklinks-menu {
-padding: 10px;
-h2 {
-font: 100 1em $header-font-family;
-color: $white;
-padding-bottom: 10px;
-}
-ul {
-li {
-a {
-color: $white;
-display: block;
-padding: 10px 20px;
-border-top: 1px solid $white;
-}
-}
-}
-}
-
-.mobile-mini-menu {
-ul {
-li {
-a {
-color: $white;
-display: block;
-padding: 10px 20px;
-border-top: 1px solid $white;
-}
-}
-}
-}
-
-aside.right-off-canvas-menu > div.mobile-search > form#searchform  > button#searchsubmit.prefix.search-icon > span.fa.fa-search.fa-1x {
-color: $white;
-font-size: 2em;
-padding: 4px 0;
-}
-
-aside.right-off-canvas-menu > div.mobile-search > form#searchform > div.row.collapse > div.small-2.columns.text-right > button#searchsubmit:hover {
-background: none;
 }

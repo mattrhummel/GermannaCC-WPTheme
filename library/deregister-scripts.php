@@ -9,11 +9,11 @@ function foundationpress_deregister_styles() {
 	wp_deregister_style( 'wgs3' );
 	wp_deregister_style( 'fb_data_style' );
 	wp_deregister_style( 'contact-form-7' );
-	wp_deregister_style( 'foundation-icon' );
 	wp_deregister_style( 'wpah-front-styles'  );
 	wp_deregister_style( 'UserAccessManagerLoginForm'  );
 	wp_deregister_style( 'yoast-seo-adminbar' );
 	wp_deregister_style( 'jquery-ui-css' );
+	
 
 }
 

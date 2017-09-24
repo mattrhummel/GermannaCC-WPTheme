@@ -1,12 +1,14 @@
-<div class="banner show-for-medium-up hidden-for-small-only" itemscope itemtype="http://schema.org/CollegeOrUniversity">
-  
-  <div class="row">
+  <div class="banner show-for-medium-up hidden-for-small-only" itemscope itemtype="http://schema.org/CollegeOrUniversity">
+
+<div class="row">
     <div class="container">
+
+  
       
-      <div class="large-4 medium-12 columns" itemprop="logo">
+      <div class="medium-3 small-12 columns" itemprop="logo">
         <a href="<?php echo get_home_url();  //get logo url ?>" class="logo" itemprop="name"><?php bloginfo('name') //get name site name ?></a>
       </div>
-      <div class="large-8 medium-12 columns">
+      <div class="medium-9 small-12 columns">
         <p class="tagline text-right" itemprop="description">
           <?php echo get_bloginfo ( 'description' ); //get tagline of website  ?>
         </p>

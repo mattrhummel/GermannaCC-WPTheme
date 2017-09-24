@@ -32,11 +32,13 @@ else {
 <?php //start the loop
 while ( have_posts() ) : the_post(); ?>
 
-<article <?php post_class() ?> id="post-<?php the_ID(); ?>" role="article">
+<main class="entry-content" id="main">
+
+
+<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 
-<main class="entry-content" id="main">
 
 <?php //Gets Page content
 the_content(); ?>
@@ -51,10 +53,10 @@ jQuery.ajax({ dataType: 'script', url: 'https://calendar.activedatax.com/germann
 });}else { document.getElementById('adx080484').innerHTML = 'Events are temporarily unavailable because the jQuery library cannot be located.'; }</script>
 
 
+</article>
 
 </main>
 
-</article>
 
 
 <?php endwhile; //Ends the loop ?>

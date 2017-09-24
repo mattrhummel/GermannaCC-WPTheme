@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <!--Content loop-->
 <div class="row  single-post-article">
-	<div class="small-12 large-12 columns" role="main">
+<div class="container">
+	
+	<main class="small-12 large-12 columns" role="main">
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php _e( 'File Not Found', 'foundationpress' ); ?></h1>
@@ -18,7 +20,9 @@
 				</ul>
 			</div>
 		</article>
-	</div>
+	</main>
+
 	
+	</div>
 </div>
 <?php get_footer(); ?>

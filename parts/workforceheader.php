@@ -1,59 +1,47 @@
-<?php 
-$bar_1_title = get_field('bar_1_title');
-$bar_2_title = get_field('bar_2_title');
-$bar_3_title = get_field('bar_3_title');
-$bar_4_title = get_field('bar_4_title');
-$bar_5_title = get_field('bar_5_title');
-$bar_1_description = get_field('bar_1_description');
-$bar_2_description = get_field('bar_2_description');
-$bar_3_description = get_field('bar_3_description');
-$bar_4_description = get_field('bar_4_description');
-$bar_5_description = get_field('bar_5_description');
-$bar_1_url = get_field('bar_1_url');
-$bar_2_url = get_field('bar_2_url');
-$bar_3_url = get_field('bar_3_url');
-$bar_4_url = get_field('bar_4_url');
-$bar_5_url = get_field('bar_5_url');
-?>
+<header id="homepage-hero"  aria-hidden="true">
+<div class="container">
 
-<header id="homepage-hero" role="banner">
-	<div class="row">
-		<div class="container">
-			<div class="slider-container">
-				<?php
-				echo "\t<ul class='bxslider1'>\n";
-					$loop = new WP_Query(array('post_type' => 'workforce-slider',
-					'posts_per_page' => 10,
-					'orderby' => 'menu_order',
-					'caller_get_posts' => 1
-					));
-					?>
-					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<li>
-						<!--<div class="bx-content">
-							<h1><?php echo the_title(); ?>
-							</h1>
-							<?php echo the_content();?>
-						</div>-->
-						<?php $my_meta = get_post_meta( $post->ID, 'header_link', true ); // see http://codex.wordpress.org/Function_Reference/get_post_meta ?>
-						<?php if ( $my_meta && '' != $my_meta ) : { ?>
-						<a href="<?php echo $my_meta ?>"><?php if ( has_post_thumbnail() ) : the_post_thumbnail('workforce-slider'); ?> </a><?php endif; } ?>
-						<?php  else : ?>
-						<?php if ( has_post_thumbnail() ) : the_post_thumbnail('workforce-slider');?>
-						<?php endif; ?>
-						<?php  endif; ?>
-					</li>
-					<?php /*keep below li or it will cause an empty li*/ endwhile; wp_reset_postdata(); ?>
-				</ul>
-				<!--.slider-->
-				<div class="outside">
-					<span id="slider-prev"></span>
-					<span id="slider-next"></span>
-				</div>
-			</div>
+<div class="slider-container">
+<ul class='bxslider1'>
+	<?php $loop = new WP_Query(array('post_type' => 'workforce-slider', //starts the loop for the slider
+	'posts_per_page' => 6,
+	'orderby' => 'menu_order',
+	'caller_get_posts' => 1
+	));
+	?>
+	<?php while ( $loop->have_posts() ) : $loop->the_post(); // checks to see if there is a post
+	
+	$slide_link = get_field('slide_link');
+	?>
+	<li><?php if( get_field('slide_link') ): ?>
+	<a href="<?php echo $slide_link ?>" aria-label="<?php the_title(); ?>"><?php endif; ?><?php $my_meta = get_post_meta( $post->ID, 'header_link', true ); ?><?php if ( $my_meta && '' != $my_meta ) : { ?><?php if ( has_post_thumbnail() ) : the_post_thumbnail('workforce-slider') ; /*loads the slide image*/ { if ( has_excerpt() ) {  // This post has excerpt.
+		//the caption buttons
+		$slide_button_1_text = get_field('slide_button_1_text');
+		$slide_button_2_text = get_field('slide_button_2_text');
+		$slide_button_1_url = get_field('slide_button_1_url');
+		$slide_button_2_url = get_field('slide_button_2_url');
+		?>
+		<div class="hero-caption">
+			<?php the_title('<h1>', '</h1>') ?>
+			
+			<?php the_excerpt() ?>
+			<ul class="button-group">
+				<?php if( get_field('slide_button_1_text') ): ?>
+				<li><a href="<?php echo $slide_button_1_url ?>" class="button" aria-label="<?php echo $slide_button_1_ ?> about <?php the_title(); ?>"><?php echo $slide_button_1_text; ?></a></li>
+				<?php endif; ?>
+				<?php if( get_field('slide_button_2_text') ): ?>
+				<li><a href="<?php echo $slide_button_2_url ?>" class="button secondary" aria-label="<?php echo $slide_button_1_ ?>  about <?php the_title(); ?>"><?php echo $slide_button_2_text; ?></a></li>
+				<?php endif; ?>
+			</ul>
 		</div>
-	</div>
-</header>
-
-
+		<?php }  else  { //the slide is a video display the video instead of the image. 
+		  } } endif; }  else :  if ( has_post_thumbnail() ) : the_post_thumbnail('home-slider'); endif;  endif;  if( get_field('slide_link') ): ?></a><?php endif; ?></li>
+<?php /*keep below li or it will cause an empty li*/ endwhile; wp_reset_postdata(); ?>
+</ul>
+<div class="outside show-for-medium-up">
+<span id="slider-next" aria-hidden="true"></span>
+<span id="slider-prev" aria-hidden="true"></span>
 </div>
+</div>
+</div>
+</header>

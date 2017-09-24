@@ -2,19 +2,15 @@
 
 .banner {
     padding: 40px 0;
-    margin: 0;
     background: $white;
     height: auto;
     max-height: 260px;
-    position: relative;
     border: none;
 }
 
 .logo {
     display: block;
     text-indent: -99999px;
-    margin: 0;
-    padding: 0;
     background: url(../assets/img/germanna_cc_logo_mobile.png) no-repeat;
     height: 50px;
     width: 264px;
@@ -23,9 +19,7 @@
 .tagline {
     color: $primary-color;
     font: 800 1em "Century Gothic", Calibri, sans-serif;
-    padding: 0;
     line-height: 12px;
-    text-transform: uppercase;
 }
 
 .sub-tagline {
@@ -39,17 +33,18 @@
     font: 600 1em "Century Gothic", Calibri, sans-serif;
 }
 
-
-/*Top quicklinks nav*/
-
-.sub-menu {
-    width: 520px !important;
-    background-color: #fafafa !important;
-    padding: 20px 10px !important;
-    position: relative;
+.mobile-tagline {
+    font: 800 1.2em "Century Gothic", Calibri, sans-serif;
+    margin-top: 10px;
+    line-height: 12px;
 }
 
-/*Request Info Button*/
+.mobile-contact {
+    font: 600 1em "Century Gothic", Calibri, sans-serif;
+}
+
+
+/*Banner Call To Buttons*/
 
 a.callto {
     display: inline-block;
@@ -88,7 +83,6 @@ a.callto span.text {
     margin-right: 10px;
 }
 
-
 /*Main Navigation*/
 
 .top-bar-container {
@@ -123,20 +117,7 @@ ul#menu-main-menu.top-bar-menu.left {
     float: left;
 }
 
-
 /*Main Navigation Dropdown Menu*/
-
-ul.sub-menu {
-    z-index: 1000 !important
-}
-
-ul.sub-menu.dropdown {
-    background-color: rgba(250, 250, 250, .6);
-    z-index: 1000 !important;
-    overflow: visible !important;
-    position: absolute;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, .8);
-}
 
 .top-bar-section .dropdown li {
     background: $ghost !important;
@@ -145,9 +126,10 @@ ul.sub-menu.dropdown {
 .top-bar-section .dropdown li:not(.has-form):not(.active)>a:not(.button),
 ul.sub-menu.dropdown>li>a,
 .top-bar-section.quicklinks-bar .dropdown li:not(.has-form):not(.active)>a:not(.button) {
-    height: 34px;
-    padding: 0 14px !important;
-    line-height: 34px;
+    height: 28px;
+    padding: 2px 14px 0 14px !important;
+    line-height: 28px;
+
     font-size: .85em !important;
     text-transform: none;
     color: $tuatara;
@@ -156,9 +138,7 @@ ul.sub-menu.dropdown>li>a,
 }
 
 .top-bar-section.quicklinks-bar>ul>li>ul.sub-menu.dropdown>li>a {
-    height: 32px;
     padding: 0 14px !important;
-    line-height: 34px;
     font-size: .85em !important;
     text-transform: none;
     color: $tuatara !important;
@@ -166,11 +146,49 @@ ul.sub-menu.dropdown>li>a,
     background: $ghost !important;
 }
 
+
+/*Dropdown Menu* Do not delete*/
+
+.sub-menu {
+    width: 520px !important;
+    background-color: #fafafa !important;
+    padding: 20px 10px !important;
+    position: relative;
+    z-index: 1000 !important
+}
+
+ul.sub-menu.dropdown {
+    background-color: rgba(250, 250, 250, .6);
+    overflow: visible !important;
+    position: absolute;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, .8);
+}
+
+ul.sub-menu li:before {
+    font-family: FontAwesome;
+    content: "\f18e";
+    position: absolute;
+    color: $tuatara !important;
+    top: 4px;
+    left: 4px;
+}
+
+ul.sub-menu.dropdown>li.active>a {
+    height: 28px !important;
+    padding: 20px 0 14px 14px !important;
+    line-height: 0 !important;
+    background-color: $ghost !important;
+    color: $primary-color !important;
+}
+
+ul.sub-menu.dropdown>li:hover {
+    color: $tuatara !important;
+}
+
 ul.sub-menu.dropdown>li a:hover {
     text-decoration: underline;
     color: $primary-color !important;
 }
-
 
 
 /*Converts dropdown menu into 2 seperate columns with just css*/
@@ -186,7 +204,6 @@ ul.sub-menu.dropdown>li a:hover {
     /*Keeps icons left of links*/
 }
 
-
 /*Position the menu columns*/
 
 .menu-columns ul.sub-menu li:nth-child(odd)+li:before {
@@ -196,7 +213,6 @@ ul.sub-menu.dropdown>li a:hover {
 .menu-columns ul.sub-menu li:nth-child(even)+li:before {
     float: right;
 }
-
 
 /*Fix different color issue when hovering over icon*/
 
@@ -208,40 +224,82 @@ ul.sub-menu.dropdown>li a:hover {
     color: $primary-color !important;
 }
 
-ul.sub-menu li:before {
-    font-family: FontAwesome;
-    content: "\f18e";
-    position: absolute;
-    color: $tuatara !important;
-    top: 4px;
-    left: 4px;
-}
-
-ul.sub-menu.dropdown>li:hover {
-    color: $tuatara !important;
-}
-
-#menu-mini-menu {
-    list-style: none;
-    li {
-        display: inline-block;
-        width: auto;
-    }
-    a {
-        text-decoration: none;
-        color: $jet;
-        padding: 0 0 0 4px;
-        width: auto;
-        font-size: 10px;
-    }
-    a:hover {
-        color: $primary-color;
-    }
-}
-
 .main-menu {
     margin-top: 0;
     padding: 0 0 0 10px;
+}
+
+.quicklinks-container {
+    background: $jet;
+    border-top: 5px solid $primary-color;
+    height: 42px !important;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    max-height: 42px;
+}
+
+.top-bar-section.quicklinks-bar {
+    padding: 0;
+    margin: 0;
+}
+
+.top-bar-section.quicklinks-bar ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        height: 36px !important;
+        a {
+            color: #8e8e8e !important;
+            font-weight: 400;
+            transition: all 0.2s ease-in;
+            font-size: .7px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 11px 10px !important;
+            margin: 0;
+            background: #23282d !important;
+            line-height: 14px !important;
+        }
+        a:hover {
+            color: $white !important;
+            background: $primary-color !important;
+        }
+    }
+    .divider {
+        border-right: solid 1px rgba(0, 0, 0, .6) !important;
+    }
+    li.menu-callouts {
+        background: rgba(255, 255, 255, .2) !important;
+        transition: all 0.2s ease-in;
+        a {
+            color: $white !important;
+        }
+    }
+    li:hover.menu-callouts {
+        a {
+            background: rgba(162, 11, 53, 1.0);
+        }
+    }
+}
+
+
+ul.sub-menu.dropdown>li.title.back.js-generated {
+    display: none;
+}
+
+.offcanvas-calltos {
+    margin: 40px 0;
+}
+
+.button-group li a {
+    color: $white;
+    margin: 0 10px 0 0;
 }
 
 button#searchsubmit.prefix.search-icon {
@@ -285,97 +343,6 @@ form#searchform>div.row.collapse>input#search {
     transition: all 0.5s ease-in;
 }
 
-.quicklinks-container {
-    background: $jet;
-    border-top: 5px solid $primary-color;
-    height: 42px !important;
-    padding: 0;
-    position: relative;
-    margin: 0;
-    max-height: 42px;
-}
-
-.top-bar-section.quicklinks-bar {
-    padding: 0;
-    margin: 0;
-}
-
-.top-bar-section.quicklinks-bar ul {
-    list-style: none;
-    text-align: left;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    li {
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-        height: 36px !important;
-        a {
-            color: #8e8e8e !important;
-            font-weight: 400;
-            transition: all 0.2s ease-in;
-            font-size: .7px;
-            font-weight: 600;
-            display: inline-block;
-            padding: 11px 10px !important;
-            margin: 0;
-            background: #23282d !important;
-            line-height: 14px !important;
-        }
-        a:hover {
-            color: $white !important;
-            background: $primary-color !important;
-        }
-    }
-    .divider {
-        border-right: solid 1px rgba(0, 0, 0, .6) !important;
-    }
-    li.menu-callouts {
-        background: rgba(255, 255, 255, .2) !important;
-        transition: all 0.2s ease-in;
-        a {
-            color: $white !important;
-        }
-    }
-    li:hover.menu-callouts {
-        a {
-            background: rgba(162, 11, 53, 1.0);
-        }
-    }
-}
-
-ul.sub-menu.dropdown>li.title.back.js-generated {
-    display: none;
-}
-
-.quick-icons {
-    float: right;
-    padding: 10px 0 0 0;
-    margin: 0;
-    a {
-        color: $primary-color;
-    }
-    a:hover {
-        color: $secondary-color;
-    }
-    span {
-        padding: 0;
-        display: block;
-        text-indent: -999999px;
-    }
-}
-
-.offcanvas-calltos {
-    margin: 40px 0;
-}
-
-.button-group li a {
-    color: $white;
-    margin: 0 10px 0 0;
-}
-
-.mobile-quicklinks {}
 
 // A more subtle background color for the active menu item
 .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -389,10 +356,3 @@ ul.sub-menu.dropdown>li.title.back.js-generated {
 form#searchform>label#search-icon-text {
     display: none !important;
 }
-
-// Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
-// The $topbar-breakpoint can be edited in _custom-settings.scss.
-@media only screen and (min-width: ($topbar-breakpoint + em-calc(1))) {}
-
-// Hide the topbar when the screen size is smaller than the topbar breakpoint
-@media only screen and (max-width: $topbar-breakpoint) {}

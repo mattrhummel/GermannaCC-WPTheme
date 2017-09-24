@@ -12,49 +12,45 @@ get_header('requestinfo'); ?>
 
 <!--Get Page Banner-->
 <div class="banner sticky">
-<div class="row" data-topbar role="navigation" data-options="sticky_on: large">
+<div class="row" role="navigation">
+<div class="container">
+  
   <div class="small-12 large-4 medium-12 columns">
-      <a href="http://www.germanna.edu" class="logo">Germanna Community College</a>
+      <a href="<?php echo esc_html('http://www.germanna.edu'); ?>" class="logo"><?php echo _e('Germanna Community College'); ?></a>
+  </div>
   </div>
 </div>
 </div>
-<!--.banner-->
 
-<!--Header for page heading-->
 <div class="callout">
   <div class="row">
+  <div class="container">
+    
   <div class="callout-content">
+   <div class="small-12 columns">
   	<h1><?php echo get_post_meta($post->ID, 'custom_header', true); ?></h1>
       <p class="lead">
           <?php echo get_post_meta($post->ID, 'custom_lead_header', true); ?>
       </p>
+    </div>
   </div>   
   </div>
 </div>
-<!--.header-->
+</div>
 
-
-<!--Request Information Template Container-->
-
-
-
-<!--Request Information Template Container-->
 <div class="row">
-<div class="contain-to-grid">
+<div class="container">
   
   <div class="request-info">
      
       <div class="row">
               
-      <!--Request Form-->
-          <div class="small-12 medium-12 large-8 columns form-group no-padding">
+          <div class="small-12 medium-12 large-8 columns form-group">
      					
               <?php the_content(); ?>
 
- 					</div><!--.requestform-->
-
+ 					</div>
               
-              <!--Testimonials-->
           <div class="small-12 medium-12 large-4 columns testimonials show-for-medium-up">
               <div class="panel  radius">
                   <!--Start bxslider slides-->
@@ -86,18 +82,14 @@ get_header('requestinfo'); ?>
                       </div>
                       <?php endwhile; wp_reset_query(); ?>
                   </div>
-                  <!--end slides-->
+
               </div>
-          </div><!--.testimonials-->
+          </div>
 
       </div>
   </div>
 </div>
 </div>
 
-
-
-<!--.request information-->
 <?php do_action( 'foundationpress_after_content' ); ?>
-<!--.content loop-->
 <?php get_footer(); ?>

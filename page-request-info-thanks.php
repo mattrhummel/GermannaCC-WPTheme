@@ -9,16 +9,19 @@ get_header('requestinfo'); ?>
 <!--Get Page Banner-->
 <div class="banner sticky">
 <div class="row" data-topbar role="navigation" data-options="sticky_on: large">
+<div class="container">
+	
   <div class="small-12 large-4 medium-12 columns">
       <a href="http://www.germanna.edu" class="logo">Germanna Community College</a>
   </div>
+  </div>
 </div>
 </div>
-<!--.banner-->
 
-<!--Header for page heading-->
 <div class="callout">
   <div class="row">
+  <div class="container">
+
   <div class="callout-content">
   	<h1>Considering Germanna Community College?</h1>
       <p class="lead">    
@@ -27,10 +30,12 @@ Lets Get Started.
   </div>   
   </div>
 </div>
-<!--.header-->
-<!--Request Information Template Container-->
+</div>
+
 <div class="row">
-	<div class="small-12 contain-to-grid">
+<div class="container">
+
+	<div class="small-12">
 		<section class="request-info">
 			<div class="row">
 				<div class="small-12 medium-12 large-8 columns form-group">
@@ -40,9 +45,7 @@ Lets Get Started.
 	            </div>
 			  <div class="small-12 medium-12 large-4 columns testimonials">
 						<div class="panel  radius">
-							<!--Start bxslider slides-->
 							<div class="bxslider-testimonials">
-								<!--Bxslider Slide-->
 
 <?php $loop = new WP_Query( array( 'post_type' => 'request_info_slider', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 					
@@ -71,7 +74,7 @@ Lets Get Started.
 
 <?php endwhile; wp_reset_query(); ?>
 					</div>
-					<!--end slides-->	
+
 				</div>
 			</div>	
 		</div>
@@ -79,9 +82,7 @@ Lets Get Started.
 	</section>
 </div>
 </div>
-<!--.request information-->
-
-
+</div>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 <!--.content loop-->

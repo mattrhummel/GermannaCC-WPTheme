@@ -98,10 +98,11 @@ div.slider-container>div.bx-wrapper>div.bx-controls.bx-has-pager>div.bx-pager.bx
 }
 
 h1.home-heading {
-    margin: 20px 0 40px 0;
-    font-size: 2.8em !important;
+    margin: 10px auto 30px auto;
+    font-size: 1.8em !important;
     text-align: center;
-    color: $jet;
+    color: $secondary-color;
+    width: 92%;
 }
 
 .home-widget-title {
@@ -155,7 +156,8 @@ h1.home-heading {
 
 ul.feature-panels {
     padding: 0;
-    margin: 0 auto 10px auto;
+    margin: 0 0 10px 0;
+
     list-style: none;
     li {
         a {
@@ -164,16 +166,18 @@ ul.feature-panels {
             max-height: 260px;
             padding: 10px 0 0 0;
             overflow: hidden;
+
             list-style: none;
+
             color: $white;
-            width: 100%;
         }
         &.apply-panel {
             -webkit-transition: all .5s ease-in-out;
-            -moz-transition: all .5s ease-in-out;
-            -ms-transition: all .5s ease-in-out;
-            -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
+               -moz-transition: all .5s ease-in-out;
+                -ms-transition: all .5s ease-in-out;
+                 -o-transition: all .5s ease-in-out;
+                    transition: all .5s ease-in-out;
+
             background: $primary-color;
         }
         &.apply-panel:hover {
@@ -181,10 +185,11 @@ ul.feature-panels {
         }
         &.register-panel {
             -webkit-transition: all .5s ease-in-out;
-            -moz-transition: all .5s ease-in-out;
-            -ms-transition: all .5s ease-in-out;
-            -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
+               -moz-transition: all .5s ease-in-out;
+                -ms-transition: all .5s ease-in-out;
+                 -o-transition: all .5s ease-in-out;
+                    transition: all .5s ease-in-out;
+
             background: $secondary-color;
         }
         &.register-panel:hover {
@@ -192,10 +197,11 @@ ul.feature-panels {
         }
         &.payment-panel {
             -webkit-transition: all .5s ease-in-out;
-            -moz-transition: all .5s ease-in-out;
-            -ms-transition: all .5s ease-in-out;
-            -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
+               -moz-transition: all .5s ease-in-out;
+                -ms-transition: all .5s ease-in-out;
+                 -o-transition: all .5s ease-in-out;
+                    transition: all .5s ease-in-out;
+
             background: $steel;
         }
         &.payment-panel:hover {
@@ -214,24 +220,23 @@ ul.feature-panels {
         }
         .title {
             padding: 0;
-            font-size: 1.4em;
+
+            font-size: 1.2em;
             font-weight: 600;
         }
         .description {
             padding: 0;
-            font-size: .9em;
+
+            font-size: .8em;
             font-weight: 100;
         }
     }
 }
 
-.register-title {
-    margin-top: 4px;
-}
 
 .panel.home-news {
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 10px 0;
     border: none;
     background: none;
     a.panel-content {
@@ -372,7 +377,7 @@ ul.feature-panels {
     background-color: #ffffff;
     padding: 10px;
     border: 1px solid $secondary-color;
-    height: 420px;
+    height: 250px;
 }
 
 .explore-image,
@@ -435,7 +440,6 @@ span.img-wrap:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-size: cover;
 }
 
 .module.parallax-2 {
@@ -444,12 +448,12 @@ span.img-wrap:hover {
     height: 100%;
     min-width: 100%;
     background: url(/wp-content/themes/FoundationGermanna/assets/img/germanna-workforce-large.jpg) no-repeat center center fixed;
-    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 
 .highlights {
     position: relative;
@@ -474,7 +478,7 @@ span.img-wrap:hover {
     position: relative;
     padding: 20px;
     margin-bottom: 40px;
-    height: 300px;
+    height: 380px;
 
     hr {
         display: block;
@@ -602,15 +606,16 @@ div.highlights-slider-container>div.bx-wrapper>div.bx-viewport>ul>li>div>a>p {
     bottom: 0;
     left: 0;
     margin: 0;
+
 }
 
 .highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3.highlights-content>li div.wf-highlights-slides {
     display: block;
-    width: 35%;
-    width: 350px;
-    height: 650px !important;
-    max-width: 350px;
-    padding: 12px;
+    width: 24%;
+    width: 240px;
+    height: 780px !important;
+    max-width: 240px;
+    padding: 8px;
     /* For IE8 and earlier */
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
@@ -634,12 +639,13 @@ div.highlights-slider-container>div.bx-wrapper>div.bx-viewport>ul>li>div>a>p {
     width: auto !important;
     padding: 0 !important;
     margin: 0 !important;
-    color: #1a7db7 !important;
+    text-decoration: underline;
+    color: #CC3333;
 }
 
 .highlights-slider-container>.bx-wrapper>.bx-viewport>ul.bxslider3.highlights-content>li div.wf-highlights-slides a:hover {
-    color: $primary-color !important;
-    background: #fff;
+    color: #ffffff;
+    background-color: #CC3333;
 }
 
 div.highlights-slider-container>div.outside {
@@ -664,12 +670,13 @@ div.highlights-slider-container>div.outside>span#slider-next3>a.bx-next {
 }
 
 div.highlights-slider-container>div.outside>span#slider-next3>a.bx-next {
-     left: -10px;
+     left: 0;
 }
 
 div.highlights-slider-container>div.outside>span#slider-prev3>a.bx-prev {
    
-     right: -10px;
+    right: -1px;
+
 }
 
 div.highlights-slider-container>div.bx-wrapper>div.bx-controls.bx-has-pager>div.bx-pager.bx-default-pager {

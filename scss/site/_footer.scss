@@ -1,35 +1,32 @@
 .footer {
-    padding: 2rem 0;
-
-    font-size: 1.2rem;
-
-    background-color: $primary-color;
+    padding: 40px 0 20px 0;
     text-align: center;
+    background-color: $primary-color !important;
     &.bottom-footer {
-        padding: 1rem 0;
-
-        background-color: $jet;
+        padding: 20px 0;
+        background-color: $secondary-color;
     }
     h3.tagline {
         line-height: 32px;
-        font-size: 1em !important;
+        font-size: 1.2em !important;
         text-transform: none;
     }
     h3,
     h4 {
         margin: 0 0 20px 0;
-
-        color: $white;
+        color: $white !important;
+        font: 800 1.2em !important;
         &.slogan {
             display: block;
             padding: 0 0 20px 0;
-
-            font: 800 1.2em !important;
         }
     }
     h4 {
-        padding: 5px 0 0 0;
-        color: $white !important;
+        padding: 0;
+        font: 800 1em !important;
+    }
+    .contact-number {
+        margin-top: 20px;
     }
     p {
         &.copywrite {
@@ -51,31 +48,56 @@
         list-style: none;
 
         background-color: $primary-color;
-    }
-    .links li {
-        padding: 0 10px 0 0;
-        margin: 0;
-    }
-    .links li a {
-        padding: 0;
-        margin: 0;
+        
+        li {
+            padding: 0 10px 0 0;
+            margin: 0;
+            a {
+                padding: 0;
+                margin: 0;
 
-        font: 400 .8em $header-font-family;
-        list-style: none;
-       letter-spacing: .8px;
-        transition: all .2s ease-in-out;
-        text-align: left;
+                font: 400 .8em $header-font-family;
+                list-style: none;
+                letter-spacing: .8px;
+                text-align: left;
 
-        color: $white;
-        &:hover {
-            text-decoration: underline;
+                color: $white;
 
-            color: $mustard;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
-}
 
-footer.footer > div#FooterImportantLinks.row div.textwidget {
+        .footer-extra-links {
+        padding: 0;
+        margin: 0 auto 20px auto;
+
+        list-style: none;
+
+        background-color: $primary-color;
+        
+        li {
+            padding: 0 10px 0 0;
+
+            a {
+                padding: 0;
+
+                font: 400 .8em $header-font-family;
+                list-style: none;
+                letter-spacing: .8px;
+                text-align: center;
+                text-decoration: none;
+                color: $white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .textwidget {
     padding: 5px 0 20px 0;
 
     font-size: 1.2rem;
@@ -83,6 +105,7 @@ footer.footer > div#FooterImportantLinks.row div.textwidget {
 
     color: $white;
     background: $primary-color;
+}
 }
 
 .footer h3 {
@@ -95,48 +118,49 @@ footer.footer > div#FooterImportantLinks.row div.textwidget {
     padding-top: 12px;
 
     background-color: $tuatara;
-}
-
-.footer-copyright p {
+   
+    p {
     display: block;
     width: 100%;
 
     font-size: .8em;
 
     color: $white;
-}
 
-.footer-copyright p a {
+     a {
     font-weight: 800;
 
     color: $white;
 }
 
-.footer-copyright p a:hover {
+
+ a:hover {
     text-decoration: underline;
 }
 
+}
+
+}
+
 .social-icons {
     padding: 0;
-    margin: 40px 0 20px 0;
+    margin: 10px auto;
     overflow: auto;
-}
 
-.social-icons li {
-    float: left;
+ li {
+    display: inline-block;
 
     list-style-type: none;
-}
-
-.social-icons li a span {
-    width: 40px;
-    height: 40px;
-    padding-top: 15%;
-    margin-right: 10px;
+   
+    a span {
+    width: 32px;
+    height: 32px;
+    padding-top: 12%;
+    margin-right: 4px;
 
     font-size: 25px;
 
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
     text-align: center;
 
     color: $primary-color;
@@ -144,74 +168,22 @@ footer.footer > div#FooterImportantLinks.row div.textwidget {
     background: $white;
 }
 
-//footer social icons
-.social-icons {
-    padding: 0;
-    margin: 0 0 20px 0;
-    overflow: auto;
+ a span:hover {
+    background: $secondary-color !important;
 }
 
-.social-icons li {
-    float: left;
-
-    list-style-type: none;
 }
 
-.social-icons li a span {
-    width: 40px;
-    height: 40px;
-    padding-top: 15%;
-    margin-right: 10px;
-
-    font-size: 25px;
-
-    transition: all .2s ease-in-out;
-    text-align: center;
-
-    color: $primary-color;
-    border-radius: 20px;
-    background: $white;
-}
-
-.social-icons li a span:hover {
-    background: $mustard;
-}
-
-.fa-facebook {
-    background: #3b5998;
-}
-
-.fa-linkedin {
-    background: #007bb6;
-}
-
-.fa-twitter {
-    background: #00aced;
-}
-
-.google-plus {
-    background: #dd4b39;
-}
-
-social-icons li a span:hover {
-    opacity: .7;
 }
 
 .logos {
-    float: left;
-    padding: 0;
-    margin: 20px 0 0 0;
+    
+    margin: 20px auto 0 auto;
+    display: inline-block;
+
 
     background-color: $primary-color;
 
-    li {
-        padding: 0;
-        margin: 0;
-    }
-
-    a {
-        color: #fff;
-    }
 }
 
 .footer-logos {
@@ -219,19 +191,14 @@ social-icons li a span:hover {
     padding: 0;
     margin: 0;
 
-    text-align: left;
     text-indent: -9999px;
 }
-
 a.tips {
     width: 132px;
+
     height: 52px;
 
     transition: all .2s ease-in-out;
 
     background: url(../assets/img/tipslogo.png) no-repeat center center;
-}
-
-a.tips:hover {
-    background: url(../assets/img/tipslogo-hover.png) no-repeat center center;
 }

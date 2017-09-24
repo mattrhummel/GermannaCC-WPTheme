@@ -42,6 +42,7 @@
 <span id="slider-next" aria-hidden="true"></span>
 <span id="slider-prev" aria-hidden="true"></span>
 </div>
+
 </div>
 </div>
 </header>

@@ -331,13 +331,13 @@ $sub-nav-list-padding-top: rem-calc(15);
 $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-$table-bg: $vapor;
-$table-even-row-bg: $gainsboro;
+$table-bg: $white;
+$table-even-row-bg: $smoke;
 
 // These control the table cell border style
 $table-border-style: solid;
 $table-border-size: 1px;
-$table-border-color: $gainsboro;
+$table-border-color: $iron;
 
 // These control the table head styles
 $table-head-bg: $primary-color;
