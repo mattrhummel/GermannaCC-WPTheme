@@ -30,5 +30,6 @@ add_theme_support( 'custom-header', $defaults );
 	add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat') );
 }
 add_action( 'after_setup_theme', 'foundationpress_theme_support' );
+
 endif;
 ?>

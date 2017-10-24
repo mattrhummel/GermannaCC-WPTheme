@@ -4,6 +4,7 @@ Template Name: Left Sidebar
 */
 get_header(); ?>
 <div class="row">
+    <div class="container">
     <main class="small-12 large-8 large-push-4 columns" id="main" role="main">
         <?php do_action( 'foundationpress_before_content' ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
@@ -26,5 +27,6 @@ get_header(); ?>
         <?php do_action( 'foundationpress_after_content' ); ?>
     </main>
     <?php get_sidebar( 'left' ); ?>
+    </div>
 </div>
 <?php get_footer(); ?>

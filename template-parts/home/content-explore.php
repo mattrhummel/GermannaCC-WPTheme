@@ -23,19 +23,12 @@ $explore_heading = get_field('explore_heading'); ?>
     <div class="small-12 columns explore-container">
       
       <div class="small-12 columns explore-image" aria-hidden="true" aria-label="section image">
-        <a role="button" aria-label="<?php the_title(); echo _e('s Website') ?>" href="<?php echo $department_link; ?>">
+        <a href="<?php echo $department_link; ?>">
           <?php if ( has_post_thumbnail() ) : /*Grabs the explore germanna post featured images*/
           the_post_thumbnail(); /*Displays post thumbnail */ ?>
         </a>
       </div>
-      <div class="small-12 columns explore-content text-center">
-        <h3><a href="<?php echo $department_link; ?>" aria-label="<?php the_title(); echo _e('Website') ?>"><?php the_title(); ?></a></h3>
-        
-        
-        
-      </div>
-      
-      
+       
     </div>
   </div>
   

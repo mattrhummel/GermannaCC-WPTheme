@@ -1,7 +1,7 @@
 <?php
 $highlights_heading = get_field('highlights_heading');
 $highlights_button_text = get_field('highlights_button_text');
-$highlights_button_url = get_field('highlights)_button_url');
+$highlights_button_url = get_field('highlights_button_url');
 ?>
 <section class="module parallax parallax-1 no-margin">
   <div class="row">
@@ -32,7 +32,7 @@ $highlights_button_url = get_field('highlights)_button_url');
             <span class="fa fa-calendar" aria-hidden="true"></span>
             <span class="post-date"><?php the_time('F Y'); ?></span>
 
-            <a href="<?php echo esc_url( get_permalink() )  ?>" class="button button-primary tiny pull-right" role="button" aria-label="<?php _e('read more about', 'foundationpress') ?> <?php the_title(); ?>"><?php _e('Read More', 'foundationpress') ?></a>
+            <a href="<?php echo esc_url( get_permalink() )  ?>" class="button button-primary tiny pull-right"><?php _e('Read More', 'foundationpress') ?> <span class="show-for-sr"> <?php _e('about', 'foundationpres'); ?>about the topic this article is pertaining to.</span></a>
 
           </div>
         </div>

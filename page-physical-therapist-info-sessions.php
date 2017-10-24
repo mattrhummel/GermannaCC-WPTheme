@@ -7,19 +7,13 @@ get_header(); ?>
 <div class="row">
 <div class="container">
 
-<div class="small-12 large-12 columns">
 <?php // if the page has a featured image
 if  (has_post_thumbnail( $post->ID ) )  { ?>
 
-<div class='row'>
-<div class='small-12 large-12 columns'>
-	<?php the_title('<h1>', '</h1>'); ?>
-</div>
-</div>
 
-<div class="row">
-<div class="small-12 large-12 columns" itemprop="breadcrumb">
-	<ul class="breadcrumbs" role="menu">
+	<?php the_title('<h1>', '</h1>'); ?>
+
+	<ul class="breadcrumbs" >
 		
 		<?php $home_page = get_the_title( get_option('page_on_front')); ?>
 		<li role="menuitem"><a href="<?php echo get_site_url(); ?>"><?php echo $home_page; ?></a></li>
@@ -39,24 +33,21 @@ if  (has_post_thumbnail( $post->ID ) )  { ?>
 		<?php the_title('<li class="last">', '</li>'); ?>
 		<?php } ?>
 	</ul>
-</div>
 
-</div>
 <div class='subpage-hero'>
 <div id='bg'>
 	<?php the_post_thumbnail('', array('class' => 'img-responsive'));  ?>
 </div>
 </div>
 
+
 <?php  }  else {  //.pagesubbanner
 // if page doesn't have a featured image
 ?>
 <div class="row without-image">
-<div class="small-12 large-12 columns'">
 	<?php the_title('<h1>', '</h1>'); ?>
-	<div class="row">
-		<div class="small-12 large-12 columns">
-			<ul class="breadcrumbs" role="menu">
+		
+			<ul class="breadcrumbs">
 				
 				<?php $home_page = get_the_title( get_option('page_on_front')); ?>
 				<li role="menuitem"><a href="<?php echo get_site_url(); ?>"><?php echo $home_page; ?></a></li>
@@ -76,18 +67,12 @@ if  (has_post_thumbnail( $post->ID ) )  { ?>
 				<?php the_title('<li class="last" role="menuitem">', '</li>'); ?>
 				<?php } ?>
 			</ul>
-		</div>
-	</div>
-</div>
+		
 </div>
 <?php } ?>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="container">
 
-<main class="small-12 medium-8 medium-push-4 large-8 columns large-push-4" role="main" id="main">
+
+<main class="small-12 medium-8 medium-push-4 large-8 columns large-push-4" id="main">
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php //start the loop
 while ( have_posts() ) : the_post(); ?>
@@ -110,6 +95,6 @@ while ( have_posts() ) : the_post(); ?>
 do_action( 'foundationpress_after_content' ); ?>
 </main>
 <?php get_template_part( 'parts/sidebars/physical-therapist-assistant-sidebar' ); ?>
-</div>
+    </div>
 </div>
 <?php get_footer(); ?>

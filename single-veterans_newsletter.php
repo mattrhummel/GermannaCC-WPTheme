@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <div class="row single-post-article no-padding-left" >
+    <div class="container">
   <div class="small-12 large-12 columns no-padding-left" role="main">
     <?php get_template_part( 'parts/custom-banners/veterans-newsletter-banner' ); ?>
     
@@ -33,6 +34,7 @@
       <?php get_template_part( 'parts/sidebars/veterans-newsletter-sidebar' ); ?>
     </article>
   </div>
+        </div>
 </div>
 
 <?php get_footer(); ?>

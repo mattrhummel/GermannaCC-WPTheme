@@ -7,10 +7,9 @@ get_header(); ?>
 <div class="row">
 	<div class="container">
 		
-		<div class="small-12 large-12 columns">
 			<?php the_title('<h1>', '</h1>') ?>
-		</div>
-		<main class="small-12 large-12 columns" role="main" id="main">
+
+        <main class="small-12 large-12 columns"  id="main">
 			<?php do_action( 'foundationpress_before_content' ); ?>
 			<?php //start the loop
 			while ( have_posts() ) : the_post(); ?>
@@ -25,6 +24,7 @@ get_header(); ?>
 			<?php endwhile; //Ends the loop ?>
 			<?php do_action( 'foundationpress_after_content' ); ?>
 		</main>
+        
 	</div>
 </div>
 <?php get_footer(); ?>

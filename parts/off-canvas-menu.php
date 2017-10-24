@@ -1,7 +1,8 @@
-<div class="right-off-canvas-menu" aria-hidden="true" aria-labelledby="MobileMenu">
+<div class="right-off-canvas-menu" aria-hidden="true">
 	<a class="right-off-canvas-toggle menu-icon">
 		<span class="fa fa-times"></span>
 	</a>
+
 	<div class="mobile-main-menu" id="MobileMenu">
 		<p class="mobile-tagline"> <?php echo get_bloginfo ( 'description' );  ?>
         </p>
@@ -13,7 +14,9 @@
 		wp_nav_menu( array( //wp_nav_menu args, look at documentation for more options.
 		'menu' => 'Mobile Main Menu', 'container' => 'true', 'menu_class' => 'submenu no-bullet' ) ); ?>
 	</div>
+
 </div>
+
 <div class="row show-for-small-only">
 	<ul class="button-group even-3">
 		<li><a href="<?php the_field('button_1_url', 'option'); ?>" class="button secondary tiny" aria-hidden="true" ><?php the_field('button_1_text', 'option'); ?></a></li>

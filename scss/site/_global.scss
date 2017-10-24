@@ -1,6 +1,8 @@
-/*
- Global styles for FoundationGermanna
-*/
+html {
+    height: 100vh; /* set viewport constraint */
+min-height: 100%; /* enforce height */
+}
+
 body {
     padding: 0;
     padding-bottom: 40px;
@@ -12,7 +14,7 @@ body {
 
     text-rendering: optimizeLegibility;
 
-     height: 100%;
+    height: 100%;
 }
 
 div.small-12.medium-8.medium-push-4.large-8.columns.large-push-4 > article {
@@ -21,12 +23,16 @@ div.small-12.medium-8.medium-push-4.large-8.columns.large-push-4 > article {
 .row {
     width: 100% !important;
     max-width: 100% !important;
+    position: relative;
+    display: block;
 }
 .container {
-    width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto !important;
+    padding-right: 10px;
+    padding-left: 10px;
 }
+
 figure {
     padding: 0;
     margin: 0;
@@ -298,3 +304,4 @@ h2 {
           z-index: 10000;
           padding: 100px;
 }
+

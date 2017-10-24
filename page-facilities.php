@@ -8,7 +8,6 @@ get_header(); ?>
 <div class="row">
 <div class="container">
 	
-<div class="small-12 large-12 columns">
 <?php // Gets the alert custom post type id for each sub page needing special announcement
 $post_id = 5465;
 $queried_post = get_post($post_id);
@@ -23,7 +22,7 @@ $queried_post = get_post($post_id);
 else {
 }
 ?>
-</div>
+
 
 <?php get_template_part( 'parts/content' ); ?>
 <?php get_template_part( 'parts/sidebars/facilities-sidebar' ); ?>

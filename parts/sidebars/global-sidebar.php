@@ -1,4 +1,4 @@
-<aside id="sidebar" class="small-12 medium-4 medium-pull-8 large-4 columns large-pull-8" role="complementary"> 
+<aside id="sidebar" class="small-12 medium-4 medium-pull-8 large-4 columns large-pull-8"> 
 <div>
 <h3><?php _e('Around Germanna'); ?></h3>    
 <?php //get custom sidebar menu for section

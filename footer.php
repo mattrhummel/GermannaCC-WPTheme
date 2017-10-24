@@ -38,31 +38,32 @@
       
       <ul class="social-icons text-center" role="menu">
         <?php if( get_field('facebook_url', 'option') ): ?>
-        <li role="menuitem"><a href="<?php the_field('facebook_url', 'option'); ?>"  aria-hidden="true"><span class="fa fa-facebook"></span></a></li>
+        <li role="menuitem"><a href="<?php the_field('facebook_url', 'option'); ?>"><span class="fa fa-facebook" aria-hidden="true"></span><span class="show-for-sr">Facebook</span></a></li>
+          
         <?php endif; ?>
         <?php if( get_field('youtube_url', 'option') ): ?>
-        <li role="menuitem"><a href="<?php the_field('youtube_url', 'option'); ?>" aria-hidden="true"><span class="fa fa-youtube"></span></a>
+        <li role="menuitem"><a href="<?php the_field('youtube_url', 'option'); ?>"><span class="fa fa-youtube"  aria-hidden="true"></span><span class="show-for-sr">YouTube</span></a>
       </li>
       <?php endif; ?>
       <?php if( get_field('twitter_url', 'option') ): ?>
-      <li role="menuitem"><a href="<?php the_field('twitter_url', 'option'); ?>" aria-hidden="true"><span class="fa fa-twitter"></span></a>
+      <li role="menuitem"><a href="<?php the_field('twitter_url', 'option'); ?>"><span class="fa fa-twitter" aria-hidden="true"></span><span class="show-for-sr">Twitter</span></a>
     </li>
     <?php endif; ?>
     <?php if( get_field('instagram_url', 'option') ): ?>
-    <li role="menuitem"><a href="<?php the_field('instagram_url', 'option'); ?>"  aria-hidden="true"><span  class="fa fa-instagram"></span></a>
+    <li role="menuitem"><a href="<?php the_field('instagram_url', 'option'); ?>"><span  class="fa fa-instagram" aria-hidden="true"></span><span class="show-for-sr">Instagram</span></a>
   </li>
   <?php endif; ?>
   <?php if( get_field('flickr_url', 'option') ): ?>
   <li role="menuitem"><a href= "<?php the_field('flickr_url', 'option'); ?>"
-  ><span  class="fa fa-flickr"></span ></a>
+  ><span class="fa fa-flickr" aria-hidden="true"></span><span class="show-for-sr">Flicker</span></a>
 </li>
 <?php endif; ?>
 <?php if( get_field('chat_url', 'option') ): ?>
-<li role="menuitem"><a href="<?php the_field('chat_url', 'option'); ?>" aria-hidden="true"><span  class="fa fa-headphones"></span></a>
+<li role="menuitem"><a href="<?php the_field('chat_url', 'option'); ?>" ><span class="fa fa-headphones" aria-hidden="true"></span><span class="show-for-sr">Online Chat</span></a>
 </li>
 <?php endif; ?>
 <?php if( get_field('rss_url', 'option') ): ?>
-<li role="menuitem"><a href="<?php the_field('rss_url', 'option'); ?>" aria-hidden="true"><span  class="fa fa-rss"></span></a>
+<li role="menuitem"><a href="<?php the_field('rss_url', 'option'); ?>"><span class="fa fa-rss" aria-hidden="true"></span><span class="show-for-sr">RSS Feed</span></a>
 </li>
 <?php endif; ?>
 </ul>

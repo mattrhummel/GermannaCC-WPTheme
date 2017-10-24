@@ -5,10 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" type="image/x-icon">
-		<link rel="apple-touch-icon-precomposed icon" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
-		<link rel="apple-touch-icon-precomposed icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
-		<link rel="apple-touch-icon-precomposed icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-icon icon" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?><?php echo esc_html('/assets/img/icons/apple-touch-icon-144x144-precomposed.png'); ?>">
+		<link rel="apple-touch-icon icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?><?php echo esc_html('/assets/img/icons/apple-touch-icon-114x114-precomposed.png'); ?>">
+		<link rel="apple-touch-icon icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?><?php echo esc_html('/assets/img/icons/apple-touch-icon-72x72-precomposed.png'); ?>">
+		<link rel="apple-touch-icon icon" href="<?php echo get_stylesheet_directory_uri(); ?><?php echo esc_html('/assets/img/icons/apple-touch-icon-precomposed.png'); ?>">
 		<?php wp_head(); ?>
 		<!--[if lt IE 9]>
 		<link rel='stylesheet' href="<?php echo get_stylesheet_directory_uri(); ?>/css/ie8.css" type="text/css">
@@ -19,7 +19,7 @@
 		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/rem.min.js"></script>
 		<![endif]-->
 	</head>
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class(); ?> itemscope itemtype="<?php echo esc_html('http://schema.org/WebPage'); ?>">
 	<?php include_once("analyticstracking.php") ?>
 		<script type="text/javascript">
 		/*<![CDATA[*/
@@ -30,15 +30,11 @@
 		})();
 		/*]]>*/
 		</script>
+		
 		<noscript class="jsalert" aria-hidden="true">
 		<?php echo _e('Sorry, your browser does not support JavaScript! For the best viewing experience please enable Javascript.') ?>
 		</noscript>
-		<div id="outdated" aria-hidden="true">
-			<p class="heading"><?php echo _e('Your Browser Is Out Of Date', 'foundationpress') ?></p>
-			<p><?php echo _e('For a better and more secure user experience Germanna.EDU only supports current browser versions', 'foundationpress'); ?></p>
-			<p><a id="btnUpdateBrowser" href="<?php echo esc_html( 'http://outdatedbrowser.com/fr' ); ?>"><?php echo _e('Find A Browser', 'foundationpress'); ?></a></p>
-			<p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Fermer">&times;</a></p>
-		</div>
+
 		<div id="skip"><a href="<?php echo esc_html('#main'); ?>" class="sr-only"><?php echo _e('Skip To Main Content', 'foundationpress'); ?></a></div>
 		<?php do_action( 'foundationpress_after_body' ); ?>
 		<?php get_template_part( 'parts/top-bar' );  /*gets main navigation*/

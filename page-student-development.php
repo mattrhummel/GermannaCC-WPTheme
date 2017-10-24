@@ -8,7 +8,6 @@ get_header(); ?>
 <div class="row">
 	<div class="container">
 		
-		<div class="small-12 large-12 columns">
 			<?php
 			$post_id = 5447;
 			$queried_post = get_post($post_id);
@@ -23,8 +22,8 @@ get_header(); ?>
 				else {
 				}
 				?>
-			</div>
-			<?php get_template_part( 'parts/content' ); ?>
+
+            <?php get_template_part( 'parts/content' ); ?>
 			<?php get_template_part( 'parts/sidebars/student-development-sidebar' ); ?>
 		</div>
 	</div>

@@ -86,9 +86,13 @@ a.callto span.text {
 /*Main Navigation*/
 
 .top-bar-container {
-    margin: 0;
+    margin: 0 ;
     padding: 0 10px;
     background: $primary-color;
+}
+
+nav.top-bar {
+    margin: 0 auto;
 }
 
 nav.top-bar>div.top-bar-section>ul.top-bar-menu.left>li {
@@ -234,9 +238,9 @@ ul.sub-menu.dropdown>li a:hover {
     border-top: 5px solid $primary-color;
     height: 42px !important;
     padding: 0;
-    position: relative;
     margin: 0;
     max-height: 42px;
+
 }
 
 .top-bar-section.quicklinks-bar {
@@ -275,19 +279,21 @@ ul.sub-menu.dropdown>li a:hover {
         border-right: solid 1px rgba(0, 0, 0, .6) !important;
     }
     li.menu-callouts {
-        background: rgba(255, 255, 255, .2) !important;
         transition: all 0.2s ease-in;
         a {
             color: $white !important;
+                    background: rgb(130, 8, 42) !important;
+                   
+
         }
     }
     li:hover.menu-callouts {
         a {
-            background: rgba(162, 11, 53, 1.0);
+        background: $primary-color !important;
+
         }
     }
 }
-
 
 ul.sub-menu.dropdown>li.title.back.js-generated {
     display: none;

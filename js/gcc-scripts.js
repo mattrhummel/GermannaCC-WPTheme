@@ -22,8 +22,8 @@ jQuery( document ).ready(function( $ ) {
      randomStart: false,
      nextSelector: '#slider-next',
      prevSelector: '#slider-prev',
-     nextText: '<span class="fa fa-angle-right">',
-     prevText: '<span class="fa fa-angle-left">',
+     nextText: '<span class="fa fa-angle-right" aria-label="scroll right"></span><span class="show-for-sr">Right</span>',
+     prevText: '<span class="fa fa-angle-left" aria-label="scroll left"></span><span class="show-for-sr">Left</span>',
      controls: true,
      pagerType:'full',
      pager: false,
@@ -42,8 +42,8 @@ $('.bxslider3').bxSlider({
     maxSlides: 3,
     nextSelector: '#slider-next3',
     prevSelector: '#slider-prev3',
-    nextText: '<span class="fa fa-angle-right">',
-    prevText: '<span class="fa fa-angle-left">',
+    nextText: '<span class="fa fa-angle-right" aria-label="scroll right">',
+    prevText: '<span class="fa fa-angle-left" aria-label="scroll right">',
     controls: true,
     onSliderLoad: function() {
          $(".highlights-slider-container").css("visibility", "visible");
@@ -105,12 +105,3 @@ function addLoadEvent(func) {
         }
     }
 }
-//call plugin function after DOM ready
-addLoadEvent(function() {
-    outdatedBrowser({
-        bgColor: '#A20B35',
-        color: '#ffffff',
-        lowerThan: 'borderImage',
-        languagePath: ''
-    })
-});

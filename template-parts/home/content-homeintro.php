@@ -26,79 +26,94 @@ $events_button_text = get_field('events_button_text');
 <div class="small-12 columns">
 <div class="small-12 medium-8 large-9 columns home-features-intro ">
 <div class="small-12 columns">
-  <div class="small-12 large-4 columns home-panels">
-    <ul class="feature-panels text-center">
-      <li class="apply-panel">
-        <a href="<?php echo $apply_url; //apply box links to online application?>">
-          <div class="panel-icon">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/board.png" height="35" width="35" alt="panel icon" />
-          </div>
-          <div class="panel-content">
-            <span class="title"><?php echo $apply_heading; ?></span>
-            <span class="description"><?php echo $apply_description; ?></span>
-          </div>
+    <div class="small-12 large-4 columns home-panels">
+        <ul class="feature-panels text-center">
+            <li class="apply-panel">
+                <a href="<?php echo $apply_url; //apply box links to online application?>">
+                    <div class="panel-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/board.png" height="35" width="35" alt="white board" />
+                    </div>
+                    <div class="panel-content">
+                        <span class="title"><?php echo $apply_heading; ?></span>
+                        <span class="description"><?php echo $apply_description; ?></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="small-12  large-4  columns home-panels">
+        <ul class="feature-panels text-center">
+            <li class="register-panel">
+                <a href="<?php echo $register_url;  //register box links to class schedule?>">
+                    <div class="panel-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/pencil.png" height="25" width="25" alt="wooden pencil" />
+                    </div>
+                    <div class="panel-content">
+                        <span class="title register-title"><?php echo $register_heading; ?></span>
+                        <span class="description"><?php echo $register_description; ?></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="small-12 large-4 columns home-panels">
+        <ul class="feature-panels text-center">
+            <li class="payment-panel">
+                <a href="<?php echo $payment_url; //payment box links to paying for college ?>">
+                    <div class="panel-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/pig.png" height="45" width="45" alt="payment icon" />
+                    </div>
+                    <div class="panel-content">
+                        <span class="title"><?php echo $payment_heading; ?></span>
+                        <span class="description"><?php echo $payment_description; ?></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="small-12 columns panel home-news">
+        <a href="<?php echo $announcement_url; //middle special announcment box ?>" class="panel-content">
+            <h3 class="title">
+                <?php echo $announcement_heading; ?>
+            </h3>
+            <p class="description">
+                <?php echo $announcement_description; ?>
+            </p>
+
         </a>
-      </li>
-    </ul>
-  </div>
-  <div class="small-12  large-4  columns home-panels">
-    <ul class="feature-panels text-center">
-      <li class="register-panel">
-        <a href="<?php echo $register_url;  //register box links to class schedule?>">
-          <div class="panel-icon">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/pencil.png" height="25" width="25" alt="panel icon" />
-          </div>
-          <div class="panel-content">
-            <span class="title register-title"><?php echo $register_heading; ?></span>
-            <span class="description"><?php echo $register_description; ?></span>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="small-12 large-4 columns home-panels">
-    <ul class="feature-panels text-center">
-      <li class="payment-panel">
-        <a href="<?php echo $payment_url; //payment box links to paying for college ?>">
-          <div class="panel-icon">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/pig.png" height="45" width="45" alt="panel icon" />
-          </div>
-          <div class="panel-content">
-            <span class="title"><?php echo $payment_heading; ?></span>
-            <span class="description"><?php echo $payment_description; ?></span>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="small-12 columns panel home-news">
-    <a href="<?php echo $announcement_url; //middle special announcment box ?>" class="panel-content">
-      <h3 class="title"><?php echo $announcement_heading; ?></h3>
-      <p class="description"><?php echo $announcement_description; ?></p>
-      
-    </a>
-  </div>
-  <div class="small-12 large-6 columns panel home-extra">
-    <a href="<?php echo $extra_box1_url; //bottom right special announcement box links to programs of study page ?>" class="panel-content">
-      <h3 class="title"><?php echo $extra_box1_heading; ?></h3>
-      <p class="description"><?php echo $extra_box1_description; ?></p>
-      
-    </a>
-  </div>
-  <div class="small-12 large-6 columns panel home-extra">
-    <a href="<?php echo $extra_box2_url; //bottom right special announcement box links to programs of study page ?>" class="panel-content">
-      <h3 class="title"><?php echo $extra_box2_heading; ?></h3>
-      <p class="description"><?php echo $extra_box2_description; ?></p>
-      
-    </a>
-  </div>
+    </div>
 </div>
 </div>
 <div class="small-12 medium-4 large-3 columns events events-box">
-<?php if ( is_active_sidebar( 'upcoming-events-widgets' ) ) : ?>
-<?php dynamic_sidebar( 'upcoming-events-widgets' ); ?>
-<?php endif; ?>
-<a href="<?php echo $events_button_url; ?>" class="button default text-center" role="button"><?php echo $events_button_text; ?></a>
+<h3>
+    <?php echo _e('Upcoming Events'); ?>
+</h3>
+<script type="text/javascript" src="<?php echo esc_html('https://calendar.activedatax.com/germanna/EventListSyndicator.aspx?type=N&amp;number=5&amp;category=9-0&amp;adpid=8&amp;nem=No+events+are+available+that+match+your+request');?>">
+</script>
+
+<a href="<?php echo esc_html('#'); ?>" data-reveal-id="moreEvents" class="button default text-center">
+    <?php echo _e('View More Events');?>
+</a>
+
+<div id="moreEvents" class="reveal-modal events-popup medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h2 id="modalTitle">
+        <?php echo _e('Upcoming Events'); ?>
+    </h2>
+
+    <script type="text/javascript" src="<?php echo esc_html('https://calendar.activedatax.com/germanna/EventListSyndicator.aspx?type=N&amp;number=30&amp;category=9-0&amp;adpid=8&amp;nem=No+events+are+available+that+match+your+request')?>">
+    </script>
+
+
+    <a href="<?php echo $events_button_url; ?>" class="button default text-center">
+        <?php echo $events_button_text; ?>
+    </a>
+
+
+    <a class="close-reveal-modal" aria-label="Close">
+        <?php echo _e('&#215;');?>
+    </a>
+</div>
+
 </div>
 </div>
 </div>

@@ -594,15 +594,6 @@ register_sidebar(array(
 	'after_title' => '</h4>',
 ));
 register_sidebar(array(
-'id' => 'lyceum-widgets',
-'name' => __( 'Lyceum Sidebar widgets', 'foundationpress' ),
-'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
-	'before_widget' => '<article id="%1$s" class="row widget %2$s">',
-	'after_widget' => '</article>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-));
-register_sidebar(array(
 'id' => 'marketing-widgets',
 'name' => __( 'Marketing Sidebar widgets', 'foundationpress' ),
 'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),

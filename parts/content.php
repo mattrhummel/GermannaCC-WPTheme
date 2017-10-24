@@ -1,9 +1,9 @@
-<main class="small-12 medium-8 medium-push-4 large-8 columns large-push-4" id="main" role="main">
+<main class="small-12 medium-8 medium-push-4 large-8 columns large-push-4">
 	<?php do_action( 'foundationpress_before_content' ); ?>
 	<?php //start the loop
 	while ( have_posts() ) : the_post(); ?>
 	
-	<article <?php post_class() ?> id="post-<?php the_ID(); ?>" role="article">
+	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
 		<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 		

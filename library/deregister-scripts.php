@@ -13,6 +13,7 @@ function foundationpress_deregister_styles() {
 	wp_deregister_style( 'UserAccessManagerLoginForm'  );
 	wp_deregister_style( 'yoast-seo-adminbar' );
 	wp_deregister_style( 'jquery-ui-css' );
+	wp_deregister_style( 'foundation-icon' );
 	
 
 }

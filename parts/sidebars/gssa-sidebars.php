@@ -1,4 +1,4 @@
-<aside id="sidebar" class="small-12 large-4 columns" role="complementary">
+<aside id="sidebar" class="small-12 large-4 columns">
     
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
 
